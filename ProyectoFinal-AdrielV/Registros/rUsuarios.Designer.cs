@@ -145,14 +145,14 @@
             this.FechaDeCreaciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaDeCreaciondateTimePicker.Location = new System.Drawing.Point(163, 227);
             this.FechaDeCreaciondateTimePicker.Name = "FechaDeCreaciondateTimePicker";
-            this.FechaDeCreaciondateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.FechaDeCreaciondateTimePicker.Size = new System.Drawing.Size(180, 22);
             this.FechaDeCreaciondateTimePicker.TabIndex = 11;
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(171, 295);
+            this.Guardarbutton.Location = new System.Drawing.Point(171, 285);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(94, 48);
+            this.Guardarbutton.Size = new System.Drawing.Size(94, 58);
             this.Guardarbutton.TabIndex = 12;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
@@ -160,9 +160,9 @@
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(30, 295);
+            this.Nuevobutton.Location = new System.Drawing.Point(30, 285);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(94, 49);
+            this.Nuevobutton.Size = new System.Drawing.Size(94, 59);
             this.Nuevobutton.TabIndex = 13;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
@@ -170,9 +170,9 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(301, 295);
+            this.Eliminarbutton.Location = new System.Drawing.Point(301, 285);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(94, 49);
+            this.Eliminarbutton.Size = new System.Drawing.Size(94, 59);
             this.Eliminarbutton.TabIndex = 14;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
