@@ -16,5 +16,11 @@ namespace ProyectoFinal_AdrielV
         {
             InitializeComponent();
         }
+
+        private void UsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.rUsuarios u = new Registros.rUsuarios();
+            u.Show();
+        }
     }
 }
