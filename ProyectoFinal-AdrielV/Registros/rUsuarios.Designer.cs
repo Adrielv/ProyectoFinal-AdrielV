@@ -41,11 +41,11 @@
             this.ClavetextBox = new System.Windows.Forms.TextBox();
             this.EmailtextBox = new System.Windows.Forms.TextBox();
             this.FechaDeCreaciondateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -106,7 +106,7 @@
             // 
             // IDnumericUpDown
             // 
-            this.IDnumericUpDown.Location = new System.Drawing.Point(149, 39);
+            this.IDnumericUpDown.Location = new System.Drawing.Point(169, 37);
             this.IDnumericUpDown.Name = "IDnumericUpDown";
             this.IDnumericUpDown.Size = new System.Drawing.Size(79, 22);
             this.IDnumericUpDown.TabIndex = 6;
@@ -115,28 +115,28 @@
             // 
             this.NombrestextBox.Location = new System.Drawing.Point(167, 79);
             this.NombrestextBox.Name = "NombrestextBox";
-            this.NombrestextBox.Size = new System.Drawing.Size(176, 22);
+            this.NombrestextBox.Size = new System.Drawing.Size(228, 22);
             this.NombrestextBox.TabIndex = 7;
             // 
             // NombreDeUsuariotextBox
             // 
             this.NombreDeUsuariotextBox.Location = new System.Drawing.Point(167, 115);
             this.NombreDeUsuariotextBox.Name = "NombreDeUsuariotextBox";
-            this.NombreDeUsuariotextBox.Size = new System.Drawing.Size(176, 22);
+            this.NombreDeUsuariotextBox.Size = new System.Drawing.Size(228, 22);
             this.NombreDeUsuariotextBox.TabIndex = 8;
             // 
             // ClavetextBox
             // 
             this.ClavetextBox.Location = new System.Drawing.Point(167, 149);
             this.ClavetextBox.Name = "ClavetextBox";
-            this.ClavetextBox.Size = new System.Drawing.Size(176, 22);
+            this.ClavetextBox.Size = new System.Drawing.Size(228, 22);
             this.ClavetextBox.TabIndex = 9;
             // 
             // EmailtextBox
             // 
             this.EmailtextBox.Location = new System.Drawing.Point(167, 187);
             this.EmailtextBox.Name = "EmailtextBox";
-            this.EmailtextBox.Size = new System.Drawing.Size(176, 22);
+            this.EmailtextBox.Size = new System.Drawing.Size(228, 22);
             this.EmailtextBox.TabIndex = 10;
             // 
             // FechaDeCreaciondateTimePicker
@@ -145,52 +145,64 @@
             this.FechaDeCreaciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaDeCreaciondateTimePicker.Location = new System.Drawing.Point(163, 227);
             this.FechaDeCreaciondateTimePicker.Name = "FechaDeCreaciondateTimePicker";
-            this.FechaDeCreaciondateTimePicker.Size = new System.Drawing.Size(180, 22);
+            this.FechaDeCreaciondateTimePicker.Size = new System.Drawing.Size(232, 22);
             this.FechaDeCreaciondateTimePicker.TabIndex = 11;
             // 
-            // Guardarbutton
+            // MyErrorProvider
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(171, 285);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(94, 58);
-            this.Guardarbutton.TabIndex = 12;
-            this.Guardarbutton.Text = "Guardar";
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            this.MyErrorProvider.ContainerControl = this;
             // 
-            // Nuevobutton
+            // Buscarbutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(30, 285);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(94, 59);
-            this.Nuevobutton.TabIndex = 13;
-            this.Nuevobutton.Text = "Nuevo";
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            this.Buscarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.kfind;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(286, 29);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(96, 37);
+            this.Buscarbutton.TabIndex = 15;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_exclude;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.Location = new System.Drawing.Point(301, 285);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(94, 59);
             this.Eliminarbutton.TabIndex = 14;
             this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
-            // Buscarbutton
+            // Nuevobutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(254, 31);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(109, 37);
-            this.Buscarbutton.TabIndex = 15;
-            this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            this.Nuevobutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_edit;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(30, 285);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(94, 59);
+            this.Nuevobutton.TabIndex = 13;
+            this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
-            // MyErrorProvider
+            // Guardarbutton
             // 
-            this.MyErrorProvider.ContainerControl = this;
+            this.Guardarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.save_as;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(171, 285);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(94, 58);
+            this.Guardarbutton.TabIndex = 12;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // rUsuarios
             // 

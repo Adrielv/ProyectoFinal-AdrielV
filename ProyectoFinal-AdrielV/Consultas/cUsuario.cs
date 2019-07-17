@@ -149,19 +149,6 @@ namespace ProyectoFinal_AdrielV.Consultas
                 ConsultadataGridView.DataSource = listado;
             }
         }
-       /* private void Imprimirbutton_Click(object sender, EventArgs e)
-        {
-            if (ConsultadataGridView.RowCount == 0)
-            {
-                MessageBox.Show("No se puede imprimir");
-                return;
-            }
-            else
-            {
-                PersonasReportViewer personasReportViewer = new PersonasReportViewer(Lista);
-                personasReportViewer.ShowDialog();
-            }
 
-        }*/
     }
 }

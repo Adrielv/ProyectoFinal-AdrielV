@@ -31,8 +31,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -40,13 +38,15 @@
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox = new System.Windows.Forms.CheckBox();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 30);
+            this.label2.Location = new System.Drawing.Point(143, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 17);
             this.label2.TabIndex = 1;
@@ -55,7 +55,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(199, 33);
+            this.label3.Location = new System.Drawing.Point(301, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 2;
@@ -70,25 +70,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Criterio:";
             // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Location = new System.Drawing.Point(852, 20);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(115, 37);
-            this.Buscarbutton.TabIndex = 4;
-            this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
-            // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.Location = new System.Drawing.Point(852, 378);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(115, 46);
-            this.Imprimirbutton.TabIndex = 5;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
-            // 
             // CriteriotextBox
             // 
             this.CriteriotextBox.Location = new System.Drawing.Point(707, 28);
@@ -99,6 +80,12 @@
             // FiltrocomboBox
             // 
             this.FiltrocomboBox.FormattingEnabled = true;
+            this.FiltrocomboBox.Items.AddRange(new object[] {
+            "Todo",
+            "ID",
+            "Nombres",
+            "Usuario",
+            "Email"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(518, 28);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(121, 24);
@@ -108,7 +95,7 @@
             // 
             this.DesdedateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DesdedateTimePicker.Location = new System.Drawing.Point(89, 30);
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(202, 28);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
             this.DesdedateTimePicker.Size = new System.Drawing.Size(93, 22);
             this.DesdedateTimePicker.TabIndex = 8;
@@ -117,7 +104,7 @@
             // 
             this.HastadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HastadateTimePicker.Location = new System.Drawing.Point(263, 30);
+            this.HastadateTimePicker.Location = new System.Drawing.Point(367, 28);
             this.HastadateTimePicker.Name = "HastadateTimePicker";
             this.HastadateTimePicker.Size = new System.Drawing.Size(93, 22);
             this.HastadateTimePicker.TabIndex = 9;
@@ -128,7 +115,7 @@
             this.ConsultadataGridView.Location = new System.Drawing.Point(24, 67);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
             this.ConsultadataGridView.RowTemplate.Height = 24;
-            this.ConsultadataGridView.Size = new System.Drawing.Size(943, 290);
+            this.ConsultadataGridView.Size = new System.Drawing.Size(929, 290);
             this.ConsultadataGridView.TabIndex = 10;
             // 
             // label5
@@ -143,18 +130,43 @@
             // checkBox
             // 
             this.checkBox.AutoSize = true;
-            this.checkBox.Location = new System.Drawing.Point(362, 30);
+            this.checkBox.Location = new System.Drawing.Point(24, 30);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(95, 21);
             this.checkBox.TabIndex = 12;
             this.checkBox.Text = "Por Fecha";
             this.checkBox.UseVisualStyleBackColor = true;
             // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.fax;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Imprimirbutton.Location = new System.Drawing.Point(836, 381);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(97, 46);
+            this.Imprimirbutton.TabIndex = 5;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.kfind;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(836, 15);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(97, 37);
+            this.Buscarbutton.TabIndex = 4;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
             // cUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 450);
+            this.ClientSize = new System.Drawing.Size(967, 445);
             this.Controls.Add(this.checkBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ConsultadataGridView);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_AdrielV
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -21,6 +21,12 @@ namespace ProyectoFinal_AdrielV
         {
             Registros.rUsuarios u = new Registros.rUsuarios();
             u.Show();
+        }
+
+        private void UsuarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Consultas.cUsuario cu = new Consultas.cUsuario();
+            cu.Show();
         }
     }
 }
