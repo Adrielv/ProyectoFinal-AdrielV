@@ -28,5 +28,11 @@ namespace ProyectoFinal_AdrielV
             Consultas.cUsuario cu = new Consultas.cUsuario();
             cu.Show();
         }
+
+        private void ClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.rCliente c = new Registros.rCliente();
+            c.Show();
+        }
     }
 }
