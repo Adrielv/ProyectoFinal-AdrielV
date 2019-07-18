@@ -184,5 +184,7 @@ namespace ProyectoFinal_AdrielV.Registros
             else
                 MessageBox.Show("No encontrado.");
         }
+
+    
     }
 }

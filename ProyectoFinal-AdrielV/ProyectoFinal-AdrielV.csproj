@@ -76,6 +76,18 @@
     <Compile Include="Registros\rCliente.Designer.cs">
       <DependentUpon>rCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\rLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\rLogIn.Designer.cs">
+      <DependentUpon>rLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\rPedidos.Designer.cs">
+      <DependentUpon>rPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\rProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +124,12 @@
     </Compile>
     <EmbeddedResource Include="Registros\rCliente.resx">
       <DependentUpon>rCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\rLogIn.resx">
+      <DependentUpon>rLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\rPedidos.resx">
+      <DependentUpon>rPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\rProductos.resx">
       <DependentUpon>rProductos.cs</DependentUpon>
@@ -168,6 +186,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fax.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adim.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
