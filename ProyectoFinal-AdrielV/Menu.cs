@@ -52,5 +52,11 @@ namespace ProyectoFinal_AdrielV
             Consultas.cCliente cl = new Consultas.cCliente();
             cl.Show();
         }
+
+        private void PedidosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Consultas.cPedidos pe = new Consultas.cPedidos();
+            pe.Show();
+        }
     }
 }

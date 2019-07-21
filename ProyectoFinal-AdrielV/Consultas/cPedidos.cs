@@ -14,6 +14,7 @@ namespace ProyectoFinal_AdrielV.Consultas
 {
     public partial class cPedidos : Form
     {
+        private List<Pedidos> Lista;
         public cPedidos()
         {
             InitializeComponent();
@@ -41,28 +42,27 @@ namespace ProyectoFinal_AdrielV.Consultas
                             else
                             {
                                 int id = Convert.ToInt32(CriteriotextBox.Text);
-                                listado = r.GetList(p => p.ClienteId == id);
+                                listado = r.GetList(p => p.PedidosId == id);
                             }
                             break;
-                        case "Nombres":
-                            if (!System.Text.RegularExpressions.Regex.IsMatch(CriteriotextBox.Text, "^[a-zA-Z ]"))
+                        case "ClientesId":
+                            int parsee;
+                            if (!int.TryParse(CriteriotextBox.Text, out parsee))
                             {
-                                MessageBox.Show("No numeros en los nombres.");
+                                MessageBox.Show("Solo numeros.");
                             }
                             else
                             {
-                                listado = r.GetList(p => p.Nombres.Contains(CriteriotextBox.Text));
+                                int clienteid = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = r.GetList(p => p.ClienteId == clienteid);
                             }
                             break;
 
-                        case "Cedula":
-                            listado = r.GetList(p => p.Cedula.Contains(CriteriotextBox.Text));
-                            break;
-                        case "Email":
-                            listado = r.GetList(p => p.Email.Contains(CriteriotextBox.Text));
+                        case "FormaPedido":
+                            listado = r.GetList(p => p.FormaPedido.Contains(CriteriotextBox.Text));
                             break;
                     }
-                    listado = listado.Where(c => c.FechaCreacion.Date >= DesdedateTimePicker.Value.Date && c.FechaCreacion.Date <= HastadateTimePicker.Value.Date).ToList();
+                    listado = listado.Where(c => c.FechaPedido.Date >= DesdedateTimePicker.Value.Date && c.FechaPedido.Date <= HastadateTimePicker.Value.Date).ToList();
                 }
                 else
                 {
@@ -79,7 +79,7 @@ namespace ProyectoFinal_AdrielV.Consultas
                         }
                     }
                     listado = r.GetList(p => true);
-                    listado = listado.Where(c => c.FechaCreacion.Date >= DesdedateTimePicker.Value.Date && c.FechaCreacion.Date <= HastadateTimePicker.Value.Date).ToList();
+                    listado = listado.Where(c => c.FechaPedido.Date >= DesdedateTimePicker.Value.Date && c.FechaPedido.Date <= HastadateTimePicker.Value.Date).ToList();
                 }
                 Lista = listado;
                 ConsultadataGridView.DataSource = listado;
@@ -105,23 +105,23 @@ namespace ProyectoFinal_AdrielV.Consultas
                                 listado = r.GetList(p => p.ClienteId == id);
                             }
                             break;
-                        case "Nombres":
-                            if (!System.Text.RegularExpressions.Regex.IsMatch(CriteriotextBox.Text, "^[a-zA-Z ]"))
+                        case "ClientesId":
+                            int parsee;
+                            if (!int.TryParse(CriteriotextBox.Text, out parsee))
                             {
-                                MessageBox.Show("No numeros en los nombres.");
+                                MessageBox.Show("Solo numeros.");
                             }
                             else
                             {
-                                listado = r.GetList(p => p.Nombres.Contains(CriteriotextBox.Text));
+                                int clienteid = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = r.GetList(p => p.ClienteId == clienteid);
                             }
                             break;
 
-                        case "Cedula":
-                            listado = r.GetList(p => p.Cedula.Contains(CriteriotextBox.Text));
+                        case "FormaPedido":
+                            listado = r.GetList(p => p.FormaPedido.Contains(CriteriotextBox.Text));
                             break;
-                        case "Email":
-                            listado = r.GetList(p => p.Email.Contains(CriteriotextBox.Text));
-                            break;
+
                     }
                 }
                 else
