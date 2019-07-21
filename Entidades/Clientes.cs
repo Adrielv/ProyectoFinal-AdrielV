@@ -22,6 +22,8 @@ namespace Entidades
 
         public string Celular { get; set; }
 
+        public DateTime FechaCreacion { get; set; }
+
         public Clientes()
         {
             ClienteId = 0;
@@ -31,6 +33,7 @@ namespace Entidades
             Direccion = string.Empty;
             Telefono = string.Empty;
             Celular = string.Empty;
+            FechaCreacion = DateTime.Now;
         }
     }
 }

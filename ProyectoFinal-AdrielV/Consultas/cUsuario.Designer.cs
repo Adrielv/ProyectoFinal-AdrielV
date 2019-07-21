@@ -141,9 +141,9 @@
             // 
             this.Imprimirbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.fax;
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Imprimirbutton.Location = new System.Drawing.Point(836, 381);
+            this.Imprimirbutton.Location = new System.Drawing.Point(829, 381);
             this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(97, 46);
+            this.Imprimirbutton.Size = new System.Drawing.Size(104, 46);
             this.Imprimirbutton.TabIndex = 5;
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -153,9 +153,9 @@
             // 
             this.Buscarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.kfind;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(836, 15);
+            this.Buscarbutton.Location = new System.Drawing.Point(836, 12);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(97, 37);
+            this.Buscarbutton.Size = new System.Drawing.Size(97, 48);
             this.Buscarbutton.TabIndex = 4;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -49,6 +49,8 @@
             this.CelulartextBox = new System.Windows.Forms.TextBox();
             this.CedulatextBox = new System.Windows.Forms.TextBox();
             this.NombrestextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.FechaCreaciondateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -118,9 +120,9 @@
             // 
             // IDnumericUpDown
             // 
-            this.IDnumericUpDown.Location = new System.Drawing.Point(120, 26);
+            this.IDnumericUpDown.Location = new System.Drawing.Point(143, 26);
             this.IDnumericUpDown.Name = "IDnumericUpDown";
-            this.IDnumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.IDnumericUpDown.Size = new System.Drawing.Size(97, 22);
             this.IDnumericUpDown.TabIndex = 7;
             // 
             // MyErrorProvider
@@ -131,7 +133,7 @@
             // 
             this.Nuevobutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_edit;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(36, 304);
+            this.Nuevobutton.Location = new System.Drawing.Point(23, 347);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(95, 61);
             this.Nuevobutton.TabIndex = 8;
@@ -157,7 +159,7 @@
             // 
             this.Elimianarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_exclude;
             this.Elimianarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Elimianarbutton.Location = new System.Drawing.Point(272, 304);
+            this.Elimianarbutton.Location = new System.Drawing.Point(270, 347);
             this.Elimianarbutton.Name = "Elimianarbutton";
             this.Elimianarbutton.Size = new System.Drawing.Size(95, 61);
             this.Elimianarbutton.TabIndex = 10;
@@ -170,7 +172,7 @@
             // 
             this.Guardarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.save_as;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(158, 304);
+            this.Guardarbutton.Location = new System.Drawing.Point(145, 347);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(95, 61);
             this.Guardarbutton.TabIndex = 11;
@@ -181,51 +183,71 @@
             // 
             // EmailtextBox
             // 
-            this.EmailtextBox.Location = new System.Drawing.Point(120, 150);
+            this.EmailtextBox.Location = new System.Drawing.Point(143, 150);
             this.EmailtextBox.Name = "EmailtextBox";
-            this.EmailtextBox.Size = new System.Drawing.Size(222, 22);
+            this.EmailtextBox.Size = new System.Drawing.Size(213, 22);
             this.EmailtextBox.TabIndex = 12;
             // 
             // DirecciontextBox
             // 
-            this.DirecciontextBox.Location = new System.Drawing.Point(120, 187);
+            this.DirecciontextBox.Location = new System.Drawing.Point(143, 186);
             this.DirecciontextBox.Name = "DirecciontextBox";
-            this.DirecciontextBox.Size = new System.Drawing.Size(222, 22);
+            this.DirecciontextBox.Size = new System.Drawing.Size(213, 22);
             this.DirecciontextBox.TabIndex = 13;
             // 
             // TelefonotextBox
             // 
-            this.TelefonotextBox.Location = new System.Drawing.Point(120, 222);
+            this.TelefonotextBox.Location = new System.Drawing.Point(143, 224);
             this.TelefonotextBox.Name = "TelefonotextBox";
-            this.TelefonotextBox.Size = new System.Drawing.Size(222, 22);
+            this.TelefonotextBox.Size = new System.Drawing.Size(213, 22);
             this.TelefonotextBox.TabIndex = 14;
             // 
             // CelulartextBox
             // 
-            this.CelulartextBox.Location = new System.Drawing.Point(120, 260);
+            this.CelulartextBox.Location = new System.Drawing.Point(143, 262);
             this.CelulartextBox.Name = "CelulartextBox";
-            this.CelulartextBox.Size = new System.Drawing.Size(222, 22);
+            this.CelulartextBox.Size = new System.Drawing.Size(213, 22);
             this.CelulartextBox.TabIndex = 15;
             // 
             // CedulatextBox
             // 
-            this.CedulatextBox.Location = new System.Drawing.Point(120, 109);
+            this.CedulatextBox.Location = new System.Drawing.Point(143, 109);
             this.CedulatextBox.Name = "CedulatextBox";
-            this.CedulatextBox.Size = new System.Drawing.Size(222, 22);
+            this.CedulatextBox.Size = new System.Drawing.Size(213, 22);
             this.CedulatextBox.TabIndex = 16;
             // 
             // NombrestextBox
             // 
-            this.NombrestextBox.Location = new System.Drawing.Point(120, 67);
+            this.NombrestextBox.Location = new System.Drawing.Point(143, 67);
             this.NombrestextBox.Name = "NombrestextBox";
-            this.NombrestextBox.Size = new System.Drawing.Size(222, 22);
+            this.NombrestextBox.Size = new System.Drawing.Size(213, 22);
             this.NombrestextBox.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(36, 304);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 17);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "FechaCreacion";
+            // 
+            // FechaCreaciondateTimePicker
+            // 
+            this.FechaCreaciondateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechaCreaciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaCreaciondateTimePicker.Location = new System.Drawing.Point(143, 304);
+            this.FechaCreaciondateTimePicker.Name = "FechaCreaciondateTimePicker";
+            this.FechaCreaciondateTimePicker.Size = new System.Drawing.Size(213, 22);
+            this.FechaCreaciondateTimePicker.TabIndex = 19;
             // 
             // rCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 376);
+            this.ClientSize = new System.Drawing.Size(388, 457);
+            this.Controls.Add(this.FechaCreaciondateTimePicker);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.NombrestextBox);
             this.Controls.Add(this.CedulatextBox);
             this.Controls.Add(this.CelulartextBox);
@@ -275,5 +297,7 @@
         private System.Windows.Forms.Button Elimianarbutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuevobutton;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker FechaCreaciondateTimePicker;
     }
 }

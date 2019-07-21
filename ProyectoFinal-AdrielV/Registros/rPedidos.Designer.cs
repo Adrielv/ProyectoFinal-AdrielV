@@ -363,7 +363,6 @@
             this.PedidocomboBox.Name = "PedidocomboBox";
             this.PedidocomboBox.Size = new System.Drawing.Size(200, 24);
             this.PedidocomboBox.TabIndex = 26;
-            this.PedidocomboBox.Visible = false;
             // 
             // rPedidos
             // 

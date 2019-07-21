@@ -156,8 +156,8 @@ namespace ProyectoFinal_AdrielV.Registros
             Pedidos pedidos;
             bool paso = false;
 
-          //  if (!Validar())
-          //      return;
+            if (!Validar())
+                return;
 
             pedidos = LlenaClase();
          //   inscripcion.CalcularMonto();

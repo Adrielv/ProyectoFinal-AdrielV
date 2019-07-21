@@ -29,6 +29,7 @@ namespace ProyectoFinal_AdrielV.Registros
             EmailtextBox.Text = string.Empty;
             TelefonotextBox.Text = string.Empty;
             CelulartextBox.Text = string.Empty;
+            FechaCreaciondateTimePicker.Value = DateTime.Now;
 
             MyErrorProvider.Clear();
 
@@ -44,6 +45,7 @@ namespace ProyectoFinal_AdrielV.Registros
             clientes.Direccion = DirecciontextBox.Text;
             clientes.Telefono = TelefonotextBox.Text;
             clientes.Celular = CelulartextBox.Text;
+            clientes.FechaCreacion = FechaCreaciondateTimePicker.Value;
 
             return clientes;
         }
@@ -57,6 +59,7 @@ namespace ProyectoFinal_AdrielV.Registros
             EmailtextBox.Text = clientes.Email;
             TelefonotextBox.Text = clientes.Telefono;
             CelulartextBox.Text = clientes.Celular;
+            FechaCreaciondateTimePicker.Value = clientes.FechaCreacion;
         }
       
 
