@@ -58,5 +58,11 @@ namespace ProyectoFinal_AdrielV
             Consultas.cPedidos pe = new Consultas.cPedidos();
             pe.Show();
         }
+
+        private void ProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.cProducto pe = new Consultas.cProducto();
+            pe.Show();
+        }
     }
 }
