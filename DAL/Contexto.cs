@@ -13,7 +13,8 @@ namespace DAL
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Productos> Productos { get; set; }
-        //public DbSet<Usuarios> Usuarios { get; set; }
+
+        public DbSet<Pedidos> Pedidos { get; set; }
 
 
         public Contexto() : base("ConStr")

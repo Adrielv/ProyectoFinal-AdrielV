@@ -12,17 +12,25 @@ namespace Entidades
         [Key]
         public int PedidosId { get; set; }
         public DateTime FechaPedido { get; set; }
+        public int ClienteId { get; set; }  
+
+        public string FormaPedido { get; set; }
         public decimal Total { get; set; }
         public decimal SubTotal { get; set; }
         public decimal ITBIS { get; set; }
+
+        public virtual List<PedidoDetalle> Productos { get; set; }
 
         public Pedidos()
         {
             PedidosId = 0;
             FechaPedido = DateTime.Now;
+            ClienteId = 0;
+            FormaPedido = string.Empty;
             Total = 0;
             SubTotal = 0;
             ITBIS = 0;
+            Productos = new List<PedidoDetalle>();
         }
     }
 }

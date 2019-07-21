@@ -40,5 +40,11 @@ namespace ProyectoFinal_AdrielV
             Registros.rProductos p = new Registros.rProductos();
             p.Show();
         }
+
+        private void PedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.rPedidos pe = new Registros.rPedidos();
+            pe.Show();
+        }
     }
 }
