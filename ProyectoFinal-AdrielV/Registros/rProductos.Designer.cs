@@ -43,7 +43,7 @@
             this.CantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.GanancianumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CostonumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ProveedorescomboBox = new System.Windows.Forms.ComboBox();
             this.FechaIngresodateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.Nuevobutton = new System.Windows.Forms.Button();
@@ -182,13 +182,13 @@
             this.CostonumericUpDown.Size = new System.Drawing.Size(234, 22);
             this.CostonumericUpDown.TabIndex = 12;
             // 
-            // comboBox1
+            // ProveedorescomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(144, 330);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(234, 24);
-            this.comboBox1.TabIndex = 13;
+            this.ProveedorescomboBox.FormattingEnabled = true;
+            this.ProveedorescomboBox.Location = new System.Drawing.Point(144, 330);
+            this.ProveedorescomboBox.Name = "ProveedorescomboBox";
+            this.ProveedorescomboBox.Size = new System.Drawing.Size(234, 24);
+            this.ProveedorescomboBox.TabIndex = 13;
             // 
             // FechaIngresodateTimePicker
             // 
@@ -275,7 +275,7 @@
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.FechaIngresodateTimePicker);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ProveedorescomboBox);
             this.Controls.Add(this.CostonumericUpDown);
             this.Controls.Add(this.GanancianumericUpDown);
             this.Controls.Add(this.CantidadnumericUpDown);
@@ -318,7 +318,7 @@
         private System.Windows.Forms.NumericUpDown CantidadnumericUpDown;
         private System.Windows.Forms.NumericUpDown GanancianumericUpDown;
         private System.Windows.Forms.NumericUpDown CostonumericUpDown;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ProveedorescomboBox;
         private System.Windows.Forms.DateTimePicker FechaIngresodateTimePicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Nuevobutton;

@@ -18,6 +18,7 @@ namespace ProyectoFinal_AdrielV.Registros
         public rProductos()
         {
             InitializeComponent();
+            LlenarComboBox();
         }
 
         private void Limpiar()
@@ -30,9 +31,22 @@ namespace ProyectoFinal_AdrielV.Registros
             CostonumericUpDown.Value = 0;
             GanancianumericUpDown.Value = 0;
             FechaIngresodateTimePicker.Value = DateTime.Now;
+            ProveedorescomboBox.Text = string.Empty;
             MyErrorProvider.Clear();
 
         }
+
+        private void LlenarComboBox()
+        {
+            RepositorioBase<Proveedores> db = new RepositorioBase<Proveedores>();
+            var listado2 = new List<Proveedores>();
+            listado2 = db.GetList(p => true);
+            ProveedorescomboBox.DataSource = listado2;
+            ProveedorescomboBox.DisplayMember = "Nombres";
+            ProveedorescomboBox.ValueMember = "ProveedorId";
+
+        }
+
         private Productos LlenaClase()
         {
             Productos productos = new Productos();
@@ -43,6 +57,7 @@ namespace ProyectoFinal_AdrielV.Registros
             productos.Cantidad = (int)CantidadnumericUpDown.Value;
             productos.Costo = (int)CostonumericUpDown.Value;
             productos.Ganancia = (int)GanancianumericUpDown.Value;
+            
           
 
             return productos;

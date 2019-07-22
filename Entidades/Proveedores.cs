@@ -12,7 +12,6 @@ namespace Entidades
         [Key]
         public int ProveedorId { get; set; }
         public string Nombres { get; set; }
-        public string Contacto { get; set; }
         public string Direccion { get; set; }
         public string Email { get; set; }
         public string Telefono { get; set; }
@@ -23,7 +22,6 @@ namespace Entidades
         {
             ProveedorId = 0;
             Nombres = string.Empty;
-            Contacto = string.Empty;
             Direccion = string.Empty;
             Email = string.Empty;
             Telefono = string.Empty;

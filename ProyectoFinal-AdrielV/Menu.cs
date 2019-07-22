@@ -70,5 +70,11 @@ namespace ProyectoFinal_AdrielV
             Registros.rLogIn lo = new Registros.rLogIn();
             lo.Show();
         }
+
+        private void ProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.rProveedores pr = new Registros.rProveedores();
+            pr.Show();
+        }
     }
 }
