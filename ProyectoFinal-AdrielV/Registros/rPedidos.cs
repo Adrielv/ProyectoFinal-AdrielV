@@ -160,7 +160,7 @@ namespace ProyectoFinal_AdrielV.Registros
                 return;
 
             pedidos = LlenaClase();
-         //   inscripcion.CalcularMonto();
+       
             if (IDnumericUpDown.Value == 0)
             {
                 paso = PedidosBLL.Guardar(pedidos);

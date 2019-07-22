@@ -50,6 +50,8 @@
             this.InformacionesdataGridView = new System.Windows.Forms.DataGridView();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CantidadaExistentenumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
             this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.Agregarbutton = new System.Windows.Forms.Button();
@@ -60,8 +62,6 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.CantidadaExistentenumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TotalnumericUpDown)).BeginInit();
@@ -70,9 +70,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.InformacionesdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadaExistentenumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadaExistentenumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -274,6 +274,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
+            // CantidadaExistentenumericUpDown
+            // 
+            this.CantidadaExistentenumericUpDown.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.CantidadaExistentenumericUpDown.InterceptArrowKeys = false;
+            this.CantidadaExistentenumericUpDown.Location = new System.Drawing.Point(144, 115);
+            this.CantidadaExistentenumericUpDown.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.CantidadaExistentenumericUpDown.Name = "CantidadaExistentenumericUpDown";
+            this.CantidadaExistentenumericUpDown.ReadOnly = true;
+            this.CantidadaExistentenumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.CantidadaExistentenumericUpDown.TabIndex = 28;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 117);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 17);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Disponible";
+            // 
             // PrecionumericUpDown
             // 
             this.PrecionumericUpDown.DecimalPlaces = 2;
@@ -409,34 +437,6 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 117);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 17);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "CantidadExistente";
-            // 
-            // CantidadaExistentenumericUpDown
-            // 
-            this.CantidadaExistentenumericUpDown.Increment = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.CantidadaExistentenumericUpDown.InterceptArrowKeys = false;
-            this.CantidadaExistentenumericUpDown.Location = new System.Drawing.Point(144, 115);
-            this.CantidadaExistentenumericUpDown.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.CantidadaExistentenumericUpDown.Name = "CantidadaExistentenumericUpDown";
-            this.CantidadaExistentenumericUpDown.ReadOnly = true;
-            this.CantidadaExistentenumericUpDown.Size = new System.Drawing.Size(120, 22);
-            this.CantidadaExistentenumericUpDown.TabIndex = 28;
-            // 
             // rPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -468,10 +468,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadaExistentenumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadaExistentenumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

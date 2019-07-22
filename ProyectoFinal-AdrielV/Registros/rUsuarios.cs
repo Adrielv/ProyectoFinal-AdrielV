@@ -37,9 +37,10 @@ namespace ProyectoFinal_AdrielV.Registros
             usuarios.UsuarioId = Convert.ToInt32(IDnumericUpDown.Value);
             usuarios.Nombres = NombrestextBox.Text;
             usuarios.Usuario = NombreDeUsuariotextBox.Text;
-            usuarios.Clave = ClavetextBox.Text;
+            usuarios.Clave = Eramake.eCryptography.Encrypt(ClavetextBox.Text);
             usuarios.Email = EmailtextBox.Text;
             usuarios.FechaCreacion = FechaDeCreaciondateTimePicker.Value;
+
 
             return usuarios;
         }

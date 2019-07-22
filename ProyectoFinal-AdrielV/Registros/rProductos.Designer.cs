@@ -242,7 +242,7 @@
             // 
             this.Eliminarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_exclude;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(280, 424);
+            this.Eliminarbutton.Location = new System.Drawing.Point(280, 406);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(98, 61);
             this.Eliminarbutton.TabIndex = 18;
@@ -255,7 +255,7 @@
             // 
             this.Guardarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.save_as;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(156, 424);
+            this.Guardarbutton.Location = new System.Drawing.Point(156, 406);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(98, 61);
             this.Guardarbutton.TabIndex = 17;
@@ -268,7 +268,7 @@
             // 
             this.Nuevobutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_edit;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(37, 424);
+            this.Nuevobutton.Location = new System.Drawing.Point(37, 406);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(98, 61);
             this.Nuevobutton.TabIndex = 16;
@@ -310,7 +310,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 510);
+            this.ClientSize = new System.Drawing.Size(412, 477);
             this.Controls.Add(this.ITBISnumericUpDown);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Buscarbutton);

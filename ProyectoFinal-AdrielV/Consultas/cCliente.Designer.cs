@@ -42,8 +42,8 @@
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -152,6 +152,7 @@
             // 
             // ConsultadataGridView
             // 
+            this.ConsultadataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultadataGridView.Location = new System.Drawing.Point(12, 168);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
@@ -177,6 +178,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
             // 
+            // checkBox
+            // 
+            this.checkBox.AutoSize = true;
+            this.checkBox.Location = new System.Drawing.Point(123, 22);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(91, 21);
+            this.checkBox.TabIndex = 6;
+            this.checkBox.Text = "PorFecha";
+            this.checkBox.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.FiltrocomboBox);
@@ -189,16 +200,6 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtrar";
-            // 
-            // checkBox
-            // 
-            this.checkBox.AutoSize = true;
-            this.checkBox.Location = new System.Drawing.Point(123, 22);
-            this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(91, 21);
-            this.checkBox.TabIndex = 6;
-            this.checkBox.Text = "PorFecha";
-            this.checkBox.UseVisualStyleBackColor = true;
             // 
             // cCliente
             // 
