@@ -64,5 +64,11 @@ namespace ProyectoFinal_AdrielV
             Consultas.cProducto pe = new Consultas.cProducto();
             pe.Show();
         }
+
+        private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.rLogIn lo = new Registros.rLogIn();
+            lo.Show();
+        }
     }
 }
