@@ -32,6 +32,7 @@ namespace ProyectoFinal_AdrielV.Registros
             GanancianumericUpDown.Value = 0;
             FechaIngresodateTimePicker.Value = DateTime.Now;
             ProveedorescomboBox.Text = string.Empty;
+            ITBISnumericUpDown.Value = 0;
             MyErrorProvider.Clear();
 
         }
@@ -57,6 +58,8 @@ namespace ProyectoFinal_AdrielV.Registros
             productos.Cantidad = (int)CantidadnumericUpDown.Value;
             productos.Costo = (int)CostonumericUpDown.Value;
             productos.Ganancia = (int)GanancianumericUpDown.Value;
+            productos.NombresProveedor = ProveedorescomboBox.Text;
+            productos.ITBIS = ITBISnumericUpDown.Value;
             
           
 
@@ -72,6 +75,8 @@ namespace ProyectoFinal_AdrielV.Registros
             CantidadnumericUpDown.Value = productos.Cantidad;
             CostonumericUpDown.Value = productos.Costo;
             GanancianumericUpDown.Value = productos.Ganancia;
+            ProveedorescomboBox.Text = productos.NombresProveedor;
+            ITBISnumericUpDown.Value = productos.ITBIS;
         }
         private bool ExisteEnLaBaseDeDatos()
         {
@@ -200,6 +205,30 @@ namespace ProyectoFinal_AdrielV.Registros
                 MessageBox.Show("No encontrado.");
         }
 
-    
+        private void PrecionumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+           double itbs = 0.18;
+            ITBISnumericUpDown.Value = PrecionumericUpDown.Value * (decimal)itbs;
+
+            if (CostonumericUpDown.Value < PrecionumericUpDown.Value)
+            {
+                GanancianumericUpDown.Value = PrecionumericUpDown.Value - CostonumericUpDown.Value;
+            }
+            else
+            {
+                GanancianumericUpDown.Value = 0;
+            }
+        }
+
+        private void CostonumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (CostonumericUpDown.Value < PrecionumericUpDown.Value)
+            {
+                GanancianumericUpDown.Value = PrecionumericUpDown.Value - CostonumericUpDown.Value;
+            }else
+            {
+                GanancianumericUpDown.Value = 0;
+            }
+        }
     }
 }

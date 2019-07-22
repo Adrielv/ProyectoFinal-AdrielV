@@ -18,12 +18,15 @@ namespace Entidades
 
         public decimal Precio { get; set; }
 
+       public decimal Impuesto { get; set; }
+
         public PedidoDetalle()
         {
             Id = 0;
             Producto = string.Empty;
             Cantidad = 0;
             Precio = 0;
+            Impuesto = 0;
         }
     }
 }

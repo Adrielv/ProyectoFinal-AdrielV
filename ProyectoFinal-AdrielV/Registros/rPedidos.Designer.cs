@@ -53,13 +53,13 @@
             this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.Agregarbutton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.EliminarLineabutton = new System.Windows.Forms.Button();
+            this.PedidocomboBox = new System.Windows.Forms.ComboBox();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            this.EliminarLineabutton = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.PedidocomboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TotalnumericUpDown)).BeginInit();
@@ -129,7 +129,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(531, 310);
+            this.label7.Location = new System.Drawing.Point(496, 307);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 6;
@@ -138,7 +138,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(365, 310);
+            this.label8.Location = new System.Drawing.Point(330, 308);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 17);
             this.label8.TabIndex = 7;
@@ -147,7 +147,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(226, 308);
+            this.label9.Location = new System.Drawing.Point(181, 308);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 17);
             this.label9.TabIndex = 8;
@@ -169,13 +169,14 @@
             // 
             // TotalnumericUpDown
             // 
-            this.TotalnumericUpDown.Location = new System.Drawing.Point(589, 308);
+            this.TotalnumericUpDown.Location = new System.Drawing.Point(557, 303);
             this.TotalnumericUpDown.Name = "TotalnumericUpDown";
             this.TotalnumericUpDown.Size = new System.Drawing.Size(113, 22);
             this.TotalnumericUpDown.TabIndex = 11;
             // 
             // ClientecomboBox
             // 
+            this.ClientecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ClientecomboBox.FormattingEnabled = true;
             this.ClientecomboBox.Location = new System.Drawing.Point(152, 140);
             this.ClientecomboBox.Name = "ClientecomboBox";
@@ -184,11 +185,13 @@
             // 
             // ProductocomboBox
             // 
+            this.ProductocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProductocomboBox.FormattingEnabled = true;
             this.ProductocomboBox.Location = new System.Drawing.Point(106, 25);
             this.ProductocomboBox.Name = "ProductocomboBox";
             this.ProductocomboBox.Size = new System.Drawing.Size(121, 24);
             this.ProductocomboBox.TabIndex = 13;
+            this.ProductocomboBox.SelectedIndexChanged += new System.EventHandler(this.ProductocomboBox_SelectedIndexChanged);
             // 
             // FechadateTimePicker
             // 
@@ -201,14 +204,14 @@
             // 
             // subTotalnumericUpDown
             // 
-            this.subTotalnumericUpDown.Location = new System.Drawing.Point(441, 308);
+            this.subTotalnumericUpDown.Location = new System.Drawing.Point(406, 305);
             this.subTotalnumericUpDown.Name = "subTotalnumericUpDown";
             this.subTotalnumericUpDown.Size = new System.Drawing.Size(74, 22);
             this.subTotalnumericUpDown.TabIndex = 15;
             // 
             // ITBISnumericUpDown
             // 
-            this.ITBISnumericUpDown.Location = new System.Drawing.Point(273, 308);
+            this.ITBISnumericUpDown.Location = new System.Drawing.Point(237, 308);
             this.ITBISnumericUpDown.Name = "ITBISnumericUpDown";
             this.ITBISnumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.ITBISnumericUpDown.TabIndex = 16;
@@ -244,8 +247,20 @@
             // 
             // PrecionumericUpDown
             // 
+            this.PrecionumericUpDown.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PrecionumericUpDown.InterceptArrowKeys = false;
             this.PrecionumericUpDown.Location = new System.Drawing.Point(106, 111);
+            this.PrecionumericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.PrecionumericUpDown.Name = "PrecionumericUpDown";
+            this.PrecionumericUpDown.ReadOnly = true;
             this.PrecionumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.PrecionumericUpDown.TabIndex = 26;
             // 
@@ -271,11 +286,54 @@
             this.Agregarbutton.UseVisualStyleBackColor = true;
             this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.InformacionesdataGridView);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.TotalnumericUpDown);
+            this.groupBox2.Controls.Add(this.ITBISnumericUpDown);
+            this.groupBox2.Controls.Add(this.EliminarLineabutton);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.subTotalnumericUpDown);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox2.Location = new System.Drawing.Point(24, 220);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(731, 343);
+            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Informaciones";
+            // 
+            // EliminarLineabutton
+            // 
+            this.EliminarLineabutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.cancel;
+            this.EliminarLineabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarLineabutton.Location = new System.Drawing.Point(26, 303);
+            this.EliminarLineabutton.Name = "EliminarLineabutton";
+            this.EliminarLineabutton.Size = new System.Drawing.Size(133, 34);
+            this.EliminarLineabutton.TabIndex = 18;
+            this.EliminarLineabutton.Text = "EliminarLinea";
+            this.EliminarLineabutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EliminarLineabutton.UseVisualStyleBackColor = true;
+            this.EliminarLineabutton.Click += new System.EventHandler(this.EliminarLineabutton_Click);
+            // 
+            // PedidocomboBox
+            // 
+            this.PedidocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PedidocomboBox.FormattingEnabled = true;
+            this.PedidocomboBox.Items.AddRange(new object[] {
+            "Credito",
+            "Contado"});
+            this.PedidocomboBox.Location = new System.Drawing.Point(152, 95);
+            this.PedidocomboBox.Name = "PedidocomboBox";
+            this.PedidocomboBox.Size = new System.Drawing.Size(200, 24);
+            this.PedidocomboBox.TabIndex = 26;
+            // 
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_edit;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(110, 585);
+            this.Nuevobutton.Location = new System.Drawing.Point(121, 585);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(136, 61);
             this.Nuevobutton.TabIndex = 23;
@@ -288,7 +346,7 @@
             // 
             this.Eliminarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_exclude;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(508, 585);
+            this.Eliminarbutton.Location = new System.Drawing.Point(535, 585);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(136, 61);
             this.Eliminarbutton.TabIndex = 22;
@@ -314,7 +372,7 @@
             // 
             this.Guardarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.save_as;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(301, 585);
+            this.Guardarbutton.Location = new System.Drawing.Point(333, 585);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(136, 61);
             this.Guardarbutton.TabIndex = 19;
@@ -322,47 +380,6 @@
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
-            // 
-            // EliminarLineabutton
-            // 
-            this.EliminarLineabutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.cancel;
-            this.EliminarLineabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarLineabutton.Location = new System.Drawing.Point(69, 301);
-            this.EliminarLineabutton.Name = "EliminarLineabutton";
-            this.EliminarLineabutton.Size = new System.Drawing.Size(133, 34);
-            this.EliminarLineabutton.TabIndex = 18;
-            this.EliminarLineabutton.Text = "EliminarLinea";
-            this.EliminarLineabutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.EliminarLineabutton.UseVisualStyleBackColor = true;
-            this.EliminarLineabutton.Click += new System.EventHandler(this.EliminarLineabutton_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.InformacionesdataGridView);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.TotalnumericUpDown);
-            this.groupBox2.Controls.Add(this.ITBISnumericUpDown);
-            this.groupBox2.Controls.Add(this.EliminarLineabutton);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.subTotalnumericUpDown);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(24, 220);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(731, 343);
-            this.groupBox2.TabIndex = 25;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Informaciones";
-            // 
-            // PedidocomboBox
-            // 
-            this.PedidocomboBox.FormattingEnabled = true;
-            this.PedidocomboBox.Items.AddRange(new object[] {
-            "Credito",
-            "Contado"});
-            this.PedidocomboBox.Location = new System.Drawing.Point(152, 95);
-            this.PedidocomboBox.Name = "PedidocomboBox";
-            this.PedidocomboBox.Size = new System.Drawing.Size(200, 24);
-            this.PedidocomboBox.TabIndex = 26;
             // 
             // rPedidos
             // 

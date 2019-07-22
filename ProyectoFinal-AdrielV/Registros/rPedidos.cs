@@ -24,7 +24,7 @@ namespace ProyectoFinal_AdrielV.Registros
            
             PedidocomboBox.Text = null;
             ClientecomboBox.Text = null;
-            ProductocomboBox.Text = null;
+         //   ProductocomboBox.Text = null;
             this.Detalle = new List<PedidoDetalle>();
         }
         private void Limpiar()
@@ -234,11 +234,15 @@ namespace ProyectoFinal_AdrielV.Registros
             this.Detalle.Add(new PedidoDetalle()
             {
                 Producto = Convert.ToString(ProductocomboBox.SelectedValue),
-               Precio = Convert.ToDecimal(PrecionumericUpDown.Value),
+                Precio = Convert.ToDecimal(PrecionumericUpDown.Value),
                 Cantidad = (int)(CantidadnumericUpDown.Value),
                 Id = (int)IDnumericUpDown.Value,
-                
+
             });
+           // CalcularItbis();
+            CalcularSubtotal();
+            CalcularTotal();
+
 
             CargarGrid();
         }
@@ -263,6 +267,42 @@ namespace ProyectoFinal_AdrielV.Registros
             {
                 MessageBox.Show("Pedido no existe");
             }
+        }
+
+        private void ProductocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Productos p = ProductocomboBox.SelectedItem as Productos;
+            PrecionumericUpDown.Text = Convert.ToString(p.Precio);
+           
+        }
+        public void CalcularItbis()
+        {
+            decimal itbis = 0;
+            foreach (var item in Detalle)
+            {
+                itbis += item.Impuesto;
+            }
+            ITBISnumericUpDown.Text = itbis.ToString();
+        }
+
+        public void CalcularTotal()
+        {
+            decimal total = 0;
+            foreach (var item in Detalle)
+            {
+                total += (item.Precio * item.Cantidad) + item.Impuesto;
+            }
+            TotalnumericUpDown.Text = total.ToString();
+        }
+
+        public void CalcularSubtotal()
+        {
+            decimal subtotal = 0;
+            foreach (var item in Detalle)
+            {
+                subtotal += item.Precio * item.Cantidad;
+            }
+           subTotalnumericUpDown.Text = subtotal.ToString();
         }
     }
 }

@@ -19,6 +19,10 @@ namespace Entidades
 
         public decimal Ganancia { get; set; }
 
+        public decimal ITBIS { get; set; }
+
+        public string NombresProveedor { get; set; }
+
         public Productos()
         {
             ProductoId = 0;
@@ -28,6 +32,9 @@ namespace Entidades
             Cantidad = 0;
             Costo = 0;
             Ganancia = 0;
+            ITBIS = 0;
+            NombresProveedor = string.Empty;
+
         }
     }
 }

@@ -133,6 +133,9 @@
   <data name="fax" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fax.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="abstract-chair-symbol-creative-furniture-logo-design-profile-view-91736431" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abstract-chair-symbol-creative-furniture-logo-design-profile-view-91736431.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="adim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adim.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,5 +144,8 @@
   </data>
   <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7c43b72afd8d357fc23dbca409c5adcf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7c43b72afd8d357fc23dbca409c5adcf.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

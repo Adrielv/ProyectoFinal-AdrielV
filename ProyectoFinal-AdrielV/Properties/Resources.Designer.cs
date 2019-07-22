@@ -63,6 +63,26 @@ namespace ProyectoFinal_AdrielV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7c43b72afd8d357fc23dbca409c5adcf {
+            get {
+                object obj = ResourceManager.GetObject("7c43b72afd8d357fc23dbca409c5adcf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abstract_chair_symbol_creative_furniture_logo_design_profile_view_91736431 {
+            get {
+                object obj = ResourceManager.GetObject("abstract-chair-symbol-creative-furniture-logo-design-profile-view-91736431", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add {
             get {
                 object obj = ResourceManager.GetObject("add", resourceCulture);

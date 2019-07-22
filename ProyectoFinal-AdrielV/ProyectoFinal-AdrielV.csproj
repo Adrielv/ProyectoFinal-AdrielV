@@ -232,5 +232,11 @@
   <ItemGroup>
     <None Include="Resources\cancel.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-chair-symbol-creative-furniture-logo-design-profile-view-91736431.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7c43b72afd8d357fc23dbca409c5adcf.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
