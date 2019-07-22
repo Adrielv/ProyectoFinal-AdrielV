@@ -116,11 +116,7 @@ namespace ProyectoFinal_AdrielV.Registros
                 MyErrorProvider.SetError(FechaIngresodateTimePicker, "No se puede registrar esta fecha.");
                 paso = false;
             }
-            if (GanancianumericUpDown.Value == 0)
-            {
-                MyErrorProvider.SetError(GanancianumericUpDown, "No puede ser 0");
-                paso = false;
-            }
+       
 
             return paso;
         }

@@ -60,6 +60,8 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.CantidadaExistentenumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TotalnumericUpDown)).BeginInit();
@@ -70,6 +72,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadaExistentenumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,7 +114,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 28);
+            this.label5.Location = new System.Drawing.Point(17, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 4;
@@ -120,7 +123,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 71);
+            this.label6.Location = new System.Drawing.Point(18, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 5;
@@ -162,15 +165,23 @@
             // 
             // CantidadnumericUpDown
             // 
-            this.CantidadnumericUpDown.Location = new System.Drawing.Point(106, 69);
+            this.CantidadnumericUpDown.Location = new System.Drawing.Point(144, 74);
             this.CantidadnumericUpDown.Name = "CantidadnumericUpDown";
             this.CantidadnumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.CantidadnumericUpDown.TabIndex = 10;
             // 
             // TotalnumericUpDown
             // 
+            this.TotalnumericUpDown.DecimalPlaces = 2;
+            this.TotalnumericUpDown.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.TotalnumericUpDown.InterceptArrowKeys = false;
             this.TotalnumericUpDown.Location = new System.Drawing.Point(557, 303);
             this.TotalnumericUpDown.Name = "TotalnumericUpDown";
+            this.TotalnumericUpDown.ReadOnly = true;
             this.TotalnumericUpDown.Size = new System.Drawing.Size(113, 22);
             this.TotalnumericUpDown.TabIndex = 11;
             // 
@@ -187,7 +198,7 @@
             // 
             this.ProductocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProductocomboBox.FormattingEnabled = true;
-            this.ProductocomboBox.Location = new System.Drawing.Point(106, 25);
+            this.ProductocomboBox.Location = new System.Drawing.Point(144, 24);
             this.ProductocomboBox.Name = "ProductocomboBox";
             this.ProductocomboBox.Size = new System.Drawing.Size(121, 24);
             this.ProductocomboBox.TabIndex = 13;
@@ -204,15 +215,31 @@
             // 
             // subTotalnumericUpDown
             // 
+            this.subTotalnumericUpDown.DecimalPlaces = 2;
+            this.subTotalnumericUpDown.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.subTotalnumericUpDown.InterceptArrowKeys = false;
             this.subTotalnumericUpDown.Location = new System.Drawing.Point(406, 305);
             this.subTotalnumericUpDown.Name = "subTotalnumericUpDown";
+            this.subTotalnumericUpDown.ReadOnly = true;
             this.subTotalnumericUpDown.Size = new System.Drawing.Size(74, 22);
             this.subTotalnumericUpDown.TabIndex = 15;
             // 
             // ITBISnumericUpDown
             // 
+            this.ITBISnumericUpDown.DecimalPlaces = 2;
+            this.ITBISnumericUpDown.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ITBISnumericUpDown.InterceptArrowKeys = false;
             this.ITBISnumericUpDown.Location = new System.Drawing.Point(237, 308);
             this.ITBISnumericUpDown.Name = "ITBISnumericUpDown";
+            this.ITBISnumericUpDown.ReadOnly = true;
             this.ITBISnumericUpDown.Size = new System.Drawing.Size(75, 22);
             this.ITBISnumericUpDown.TabIndex = 16;
             // 
@@ -222,7 +249,7 @@
             this.InformacionesdataGridView.Location = new System.Drawing.Point(26, 21);
             this.InformacionesdataGridView.Name = "InformacionesdataGridView";
             this.InformacionesdataGridView.RowTemplate.Height = 24;
-            this.InformacionesdataGridView.Size = new System.Drawing.Size(685, 274);
+            this.InformacionesdataGridView.Size = new System.Drawing.Size(699, 274);
             this.InformacionesdataGridView.TabIndex = 17;
             // 
             // MyErrorProvider
@@ -231,6 +258,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CantidadaExistentenumericUpDown);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.PrecionumericUpDown);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label10);
@@ -240,20 +269,21 @@
             this.groupBox1.Controls.Add(this.Agregarbutton);
             this.groupBox1.Location = new System.Drawing.Point(417, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(277, 201);
+            this.groupBox1.Size = new System.Drawing.Size(332, 201);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
             // PrecionumericUpDown
             // 
+            this.PrecionumericUpDown.DecimalPlaces = 2;
             this.PrecionumericUpDown.Increment = new decimal(new int[] {
             0,
             0,
             0,
             0});
             this.PrecionumericUpDown.InterceptArrowKeys = false;
-            this.PrecionumericUpDown.Location = new System.Drawing.Point(106, 111);
+            this.PrecionumericUpDown.Location = new System.Drawing.Point(144, 161);
             this.PrecionumericUpDown.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -267,7 +297,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 116);
+            this.label10.Location = new System.Drawing.Point(18, 161);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 17);
             this.label10.TabIndex = 25;
@@ -276,12 +306,10 @@
             // Agregarbutton
             // 
             this.Agregarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.add;
-            this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Agregarbutton.Location = new System.Drawing.Point(91, 151);
+            this.Agregarbutton.Location = new System.Drawing.Point(270, 138);
             this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(109, 40);
+            this.Agregarbutton.Size = new System.Drawing.Size(47, 40);
             this.Agregarbutton.TabIndex = 21;
-            this.Agregarbutton.Text = "Agregar";
             this.Agregarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Agregarbutton.UseVisualStyleBackColor = true;
             this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
@@ -381,6 +409,34 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 117);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(121, 17);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "CantidadExistente";
+            // 
+            // CantidadaExistentenumericUpDown
+            // 
+            this.CantidadaExistentenumericUpDown.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.CantidadaExistentenumericUpDown.InterceptArrowKeys = false;
+            this.CantidadaExistentenumericUpDown.Location = new System.Drawing.Point(144, 115);
+            this.CantidadaExistentenumericUpDown.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.CantidadaExistentenumericUpDown.Name = "CantidadaExistentenumericUpDown";
+            this.CantidadaExistentenumericUpDown.ReadOnly = true;
+            this.CantidadaExistentenumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.CantidadaExistentenumericUpDown.TabIndex = 28;
+            // 
             // rPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -415,6 +471,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadaExistentenumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,5 +509,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox PedidocomboBox;
+        private System.Windows.Forms.NumericUpDown CantidadaExistentenumericUpDown;
+        private System.Windows.Forms.Label label11;
     }
 }

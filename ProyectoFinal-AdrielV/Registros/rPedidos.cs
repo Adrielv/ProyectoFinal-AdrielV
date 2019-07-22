@@ -229,17 +229,19 @@ namespace ProyectoFinal_AdrielV.Registros
             if (InformacionesdataGridView.DataSource != null)
                 this.Detalle = (List<PedidoDetalle>)InformacionesdataGridView.DataSource;
 
-
+            Productos p = ProductocomboBox.SelectedItem as Productos;
 
             this.Detalle.Add(new PedidoDetalle()
             {
+
                 Producto = Convert.ToString(ProductocomboBox.SelectedValue),
                 Precio = Convert.ToDecimal(PrecionumericUpDown.Value),
                 Cantidad = (int)(CantidadnumericUpDown.Value),
                 Id = (int)IDnumericUpDown.Value,
+                Impuesto =  p.ITBIS * CantidadnumericUpDown.Value
 
             });
-           // CalcularItbis();
+            CalcularItbis();
             CalcularSubtotal();
             CalcularTotal();
 
@@ -273,7 +275,8 @@ namespace ProyectoFinal_AdrielV.Registros
         {
             Productos p = ProductocomboBox.SelectedItem as Productos;
             PrecionumericUpDown.Text = Convert.ToString(p.Precio);
-           
+            CantidadaExistentenumericUpDown.Text = Convert.ToString(p.Cantidad);
+
         }
         public void CalcularItbis()
         {
