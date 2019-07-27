@@ -21,7 +21,7 @@ namespace ProyectoFinal_AdrielV.Registros
             InitializeComponent();
             LlenarComboBox();
             LLenarComboBox2();
-           
+            Limpiar();
             PedidocomboBox.Text = null;
             ClientecomboBox.Text = null;
          //   ProductocomboBox.Text = null;
@@ -30,14 +30,16 @@ namespace ProyectoFinal_AdrielV.Registros
         private void Limpiar()
         {
             IDnumericUpDown.Value = 0;
-            PedidocomboBox.Text = string.Empty;
-            ClientecomboBox.Text = string.Empty;
-            ProductocomboBox.Text = string.Empty;
+            PedidocomboBox.Text = null;
+            ClientecomboBox.Text = null;
+            ProductocomboBox.Text = null;
             CantidadnumericUpDown.Value = 0;
+            CantidadaExistentenumericUpDown.Value = 0;
             PrecionumericUpDown.Value = 0;
             ITBISnumericUpDown.Value = 0;
             subTotalnumericUpDown.Value = 0;
             TotalnumericUpDown.Value = 0;
+            ProductocomboBox.Text = null;
             this.Detalle = new List<PedidoDetalle>();
             MyErrorProvider.Clear();
             CargarGrid();
@@ -49,17 +51,9 @@ namespace ProyectoFinal_AdrielV.Registros
             pedidos.Productos = this.Detalle;
 
             
-            if (IDnumericUpDown.Value == 0)
-            {
-                pedidos.ClienteId = Convert.ToInt32(ClientecomboBox.SelectedValue);
+           pedidos.Cliente = ClientecomboBox.Text;
                
-               
-            }
-            else
-            {
-                pedidos.ClienteId = Convert.ToInt32(ClientecomboBox.Text);
-               
-            }
+
           
             pedidos.PedidosId = Convert.ToInt32(IDnumericUpDown.Value);
             pedidos.FormaPedido = PedidocomboBox.Text;
@@ -77,7 +71,8 @@ namespace ProyectoFinal_AdrielV.Registros
 
             IDnumericUpDown.Value = pedidos.PedidosId;
             PedidocomboBox.Text = pedidos.FormaPedido;
-            ClientecomboBox.Text = Convert.ToString(pedidos.ClienteId);
+           
+            ClientecomboBox.Text = pedidos.Cliente;
             FechadateTimePicker.Value = pedidos.FechaPedido;    //falta precio y cantidad
            // PrecionumericUpDown.Value = 
             ITBISnumericUpDown.Value = pedidos.ITBIS;
@@ -181,8 +176,10 @@ namespace ProyectoFinal_AdrielV.Registros
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          //  LlenaClase();
+            //  LlenaClase();
+            this.Refresh();
             Limpiar();
+            
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
@@ -277,9 +274,11 @@ namespace ProyectoFinal_AdrielV.Registros
         private void ProductocomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Productos p = ProductocomboBox.SelectedItem as Productos;
-            PrecionumericUpDown.Text = Convert.ToString(p.Precio);
-            CantidadaExistentenumericUpDown.Text = Convert.ToString(p.Cantidad);
-
+            if (p != null)
+            {
+                PrecionumericUpDown.Text = Convert.ToString(p.Precio);
+                CantidadaExistentenumericUpDown.Text = Convert.ToString(p.Cantidad);
+            }
         }
         public void CalcularItbis()
         {

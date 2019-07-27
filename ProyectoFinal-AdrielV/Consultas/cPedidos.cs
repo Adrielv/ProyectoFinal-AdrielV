@@ -54,7 +54,7 @@ namespace ProyectoFinal_AdrielV.Consultas
                             else
                             {
                                 int clienteid = Convert.ToInt32(CriteriotextBox.Text);
-                                listado = r.GetList(p => p.ClienteId == clienteid);
+                      //          listado = r.GetList(p => p.ClienteId == clienteid);
                             }
                             break;
 
@@ -102,7 +102,7 @@ namespace ProyectoFinal_AdrielV.Consultas
                             else
                             {
                                 int id = Convert.ToInt32(CriteriotextBox.Text);
-                                listado = r.GetList(p => p.ClienteId == id);
+                      //          listado = r.GetList(p => p.ClienteId == id);
                             }
                             break;
                         case "ClientesId":
@@ -114,7 +114,7 @@ namespace ProyectoFinal_AdrielV.Consultas
                             else
                             {
                                 int clienteid = Convert.ToInt32(CriteriotextBox.Text);
-                                listado = r.GetList(p => p.ClienteId == clienteid);
+                    //            listado = r.GetList(p => p.ClienteId == clienteid);
                             }
                             break;
 
