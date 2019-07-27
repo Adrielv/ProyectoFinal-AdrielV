@@ -82,6 +82,82 @@ namespace ProyectoFinal_AdrielV.Registros
             }
             return paso;
         }
+        public static bool RepetirNombre(string descripcion)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+
+            try
+            {
+                if (db.Clientes.Any(p => p.Nombres.Equals(descripcion)))
+                {
+                    paso = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
+        public static bool RepetirCedula(string descripcion)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+
+            try
+            {
+                if (db.Clientes.Any(p => p.Cedula.Equals(descripcion)))
+                {
+                    paso = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
+        public static bool RepetirTelefono(string descripcion)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+
+            try
+            {
+                if (db.Clientes.Any(p => p.Telefono.Equals(descripcion)))
+                {
+                    paso = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
+        private bool ValidarRepeticion()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
+            if (RepetirNombre(NombrestextBox.Text))
+            {
+                MyErrorProvider.SetError(NombrestextBox, "No se pueden repetir.");
+                paso = false;
+            }
+            if ( RepetirCedula(CedulamaskedTextBox.Text))
+            {
+                MyErrorProvider.SetError(CedulamaskedTextBox, "No se pueden repetir.");
+                paso = false;
+            }
+            if (RepetirTelefono(TelefonomaskedTextBox.Text))
+            {
+                MyErrorProvider.SetError(TelefonomaskedTextBox, "No se pueden repetir.");
+                paso = false;
+            }
+            return paso;
+        }
         private bool Validar()
         {
             bool paso = true;
@@ -158,7 +234,12 @@ namespace ProyectoFinal_AdrielV.Registros
                 return;
 
             if (IDnumericUpDown.Value == 0)
+            {
+                if (!ValidarRepeticion())
+                    return; 
+
                 paso = Repositorio.Guardar(clientes);
+            }
             else
             {
                 if (!ExisteEnLaBaseDeDatos())
@@ -214,6 +295,12 @@ namespace ProyectoFinal_AdrielV.Registros
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void NombrestextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

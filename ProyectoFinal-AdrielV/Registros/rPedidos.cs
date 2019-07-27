@@ -119,6 +119,19 @@ namespace ProyectoFinal_AdrielV.Registros
          
             return paso;
         }
+        private bool ValidarEliminar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
+            if (IDnumericUpDown.Value == 0)
+            {
+                MyErrorProvider.SetError(IDnumericUpDown, "Busquelo y luego eliminelo.");
+                IDnumericUpDown.Focus();
+                paso = false;
+            }
+            return paso;
+        }
 
         private void LlenarComboBox()
         {
@@ -186,7 +199,8 @@ namespace ProyectoFinal_AdrielV.Registros
         {
             RepositorioBase<Pedidos> db = new RepositorioBase<Pedidos>();
 
-           
+            if (!ValidarEliminar())
+                return;
 
             if (IDnumericUpDown.Value > 0)
             {
@@ -230,6 +244,27 @@ namespace ProyectoFinal_AdrielV.Registros
                 this.Detalle = (List<PedidoDetalle>)InformacionesdataGridView.DataSource;
 
             Productos p = ProductocomboBox.SelectedItem as Productos;
+
+            if (ProductocomboBox.SelectedValue != null)
+            {
+                int d = (int)ProductocomboBox.SelectedValue;
+
+                foreach (var item in Detalle)
+                {
+                    if (d == item.ProductoId)
+                    {
+                        MyErrorProvider.SetError(Agregarbutton, "El producto ya esta en el grid.");
+                        return;
+                    }
+                }
+
+                if (CantidadnumericUpDown.Value > Convert.ToInt32(CantidadaExistentenumericUpDown.Value))
+                {
+                    MyErrorProvider.SetError(CantidadaExistentenumericUpDown, "No quedan disponibles.");
+                    return;
+                }
+            }
+
 
             this.Detalle.Add(new PedidoDetalle()
             {

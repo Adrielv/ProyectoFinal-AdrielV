@@ -54,6 +54,7 @@
             this.NombrestextBox.Name = "NombrestextBox";
             this.NombrestextBox.Size = new System.Drawing.Size(217, 22);
             this.NombrestextBox.TabIndex = 0;
+            this.NombrestextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombrestextBox_KeyPress);
             // 
             // label1
             // 
@@ -120,6 +121,7 @@
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(217, 22);
             this.EmailtextBox.TabIndex = 12;
+            this.EmailtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailtextBox_KeyPress);
             // 
             // Guardarbutton
             // 

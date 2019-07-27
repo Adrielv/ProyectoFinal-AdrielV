@@ -201,6 +201,7 @@
             this.NombrestextBox.Name = "NombrestextBox";
             this.NombrestextBox.Size = new System.Drawing.Size(213, 22);
             this.NombrestextBox.TabIndex = 17;
+            this.NombrestextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombrestextBox_KeyPress);
             // 
             // label8
             // 
