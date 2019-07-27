@@ -26,7 +26,7 @@ namespace ProyectoFinal_AdrielV.Registros
             NombrestextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             EmailtextBox.Text = string.Empty;
-            TelefonotextBox.Text = string.Empty;
+            TelefonomaskedTextBox.Text = string.Empty;
         
 
             MyErrorProvider.Clear();
@@ -41,7 +41,7 @@ namespace ProyectoFinal_AdrielV.Registros
 
             proveedores.Email = EmailtextBox.Text;
             proveedores.Direccion = DirecciontextBox.Text;
-            proveedores.Telefono = TelefonotextBox.Text;
+            proveedores.Telefono = TelefonomaskedTextBox.Text;
 
 
             return proveedores;
@@ -54,7 +54,7 @@ namespace ProyectoFinal_AdrielV.Registros
            
             DirecciontextBox.Text = proveedores.Direccion;
             EmailtextBox.Text = proveedores.Email;
-            TelefonotextBox.Text = proveedores.Telefono;
+            TelefonomaskedTextBox.Text = proveedores.Telefono;
          
         }
 
@@ -79,9 +79,9 @@ namespace ProyectoFinal_AdrielV.Registros
                 MyErrorProvider.SetError(EmailtextBox, "No puede ser vacio.");
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(TelefonotextBox.Text))
+            if (!TelefonomaskedTextBox.MaskCompleted)
             {
-                MyErrorProvider.SetError(TelefonotextBox, "No puede ser vacio.");
+                MyErrorProvider.SetError(TelefonomaskedTextBox, "No puede ser vacio.");
                 paso = false;
             }
           

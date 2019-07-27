@@ -241,5 +241,11 @@
   <ItemGroup>
     <None Include="Resources\7c43b72afd8d357fc23dbca409c5adcf.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment_89074470.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\92786425-plantilla-de-logotipo-de-muebles-icono-de-muebles-logotipo-de-la-tienda-de-muebles-diseño-de-muebles-mu.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

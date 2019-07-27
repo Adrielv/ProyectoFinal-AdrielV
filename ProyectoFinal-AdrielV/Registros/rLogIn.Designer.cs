@@ -84,8 +84,10 @@
             // 
             // rLogIn
             // 
+            this.AcceptButton = this.Entrarbutton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(442, 143);
             this.Controls.Add(this.ClavetextBox);
             this.Controls.Add(this.UsuariotextBox);

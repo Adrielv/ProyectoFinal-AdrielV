@@ -43,17 +43,15 @@
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox = new System.Windows.Forms.CheckBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Desdelabel
             // 
             this.Desdelabel.AutoSize = true;
-            this.Desdelabel.Location = new System.Drawing.Point(21, 59);
+            this.Desdelabel.Location = new System.Drawing.Point(21, 38);
             this.Desdelabel.Name = "Desdelabel";
             this.Desdelabel.Size = new System.Drawing.Size(49, 17);
             this.Desdelabel.TabIndex = 0;
@@ -62,7 +60,7 @@
             // Hastalabel
             // 
             this.Hastalabel.AutoSize = true;
-            this.Hastalabel.Location = new System.Drawing.Point(21, 104);
+            this.Hastalabel.Location = new System.Drawing.Point(302, 38);
             this.Hastalabel.Name = "Hastalabel";
             this.Hastalabel.Size = new System.Drawing.Size(45, 17);
             this.Hastalabel.TabIndex = 1;
@@ -71,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 34);
+            this.label3.Location = new System.Drawing.Point(601, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 17);
             this.label3.TabIndex = 2;
@@ -80,7 +78,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 91);
+            this.label4.Location = new System.Drawing.Point(771, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 3;
@@ -90,7 +88,7 @@
             // 
             this.DesdedateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DesdedateTimePicker.Location = new System.Drawing.Point(86, 59);
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(86, 38);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
             this.DesdedateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.DesdedateTimePicker.TabIndex = 4;
@@ -99,13 +97,14 @@
             // 
             this.HastadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HastadateTimePicker.Location = new System.Drawing.Point(86, 99);
+            this.HastadateTimePicker.Location = new System.Drawing.Point(367, 33);
             this.HastadateTimePicker.Name = "HastadateTimePicker";
             this.HastadateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.HastadateTimePicker.TabIndex = 5;
             // 
             // FiltrocomboBox
             // 
+            this.FiltrocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltrocomboBox.FormattingEnabled = true;
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "Todo",
@@ -113,14 +112,14 @@
             "Email",
             "Cedula",
             "Nombres"});
-            this.FiltrocomboBox.Location = new System.Drawing.Point(100, 34);
+            this.FiltrocomboBox.Location = new System.Drawing.Point(644, 41);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(121, 24);
             this.FiltrocomboBox.TabIndex = 6;
             // 
             // CriteriotextBox
             // 
-            this.CriteriotextBox.Location = new System.Drawing.Point(100, 91);
+            this.CriteriotextBox.Location = new System.Drawing.Point(830, 41);
             this.CriteriotextBox.Name = "CriteriotextBox";
             this.CriteriotextBox.Size = new System.Drawing.Size(121, 22);
             this.CriteriotextBox.TabIndex = 7;
@@ -128,13 +127,13 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.kfind;
-            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Buscarbutton.Location = new System.Drawing.Point(690, 46);
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(968, 29);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(92, 63);
+            this.Buscarbutton.Size = new System.Drawing.Size(97, 47);
             this.Buscarbutton.TabIndex = 8;
             this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -142,7 +141,7 @@
             // 
             this.Imprimirbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.fax;
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Imprimirbutton.Location = new System.Drawing.Point(661, 529);
+            this.Imprimirbutton.Location = new System.Drawing.Point(968, 430);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(110, 50);
             this.Imprimirbutton.TabIndex = 9;
@@ -154,10 +153,10 @@
             // 
             this.ConsultadataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultadataGridView.Location = new System.Drawing.Point(12, 168);
+            this.ConsultadataGridView.Location = new System.Drawing.Point(12, 88);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
             this.ConsultadataGridView.RowTemplate.Height = 24;
-            this.ConsultadataGridView.Size = new System.Drawing.Size(783, 336);
+            this.ConsultadataGridView.Size = new System.Drawing.Size(1079, 336);
             this.ConsultadataGridView.TabIndex = 10;
             // 
             // MyErrorProvider
@@ -173,7 +172,7 @@
             this.groupBox1.Controls.Add(this.HastadateTimePicker);
             this.groupBox1.Location = new System.Drawing.Point(28, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(352, 150);
+            this.groupBox1.Size = new System.Drawing.Size(573, 70);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
@@ -181,34 +180,24 @@
             // checkBox
             // 
             this.checkBox.AutoSize = true;
-            this.checkBox.Location = new System.Drawing.Point(123, 22);
+            this.checkBox.Location = new System.Drawing.Point(6, 0);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(91, 21);
             this.checkBox.TabIndex = 6;
             this.checkBox.Text = "PorFecha";
             this.checkBox.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.FiltrocomboBox);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.CriteriotextBox);
-            this.groupBox2.Location = new System.Drawing.Point(410, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(257, 150);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Filtrar";
-            // 
             // cCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 591);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1105, 482);
+            this.Controls.Add(this.FiltrocomboBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.ConsultadataGridView);
+            this.Controls.Add(this.CriteriotextBox);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.Buscarbutton);
             this.Name = "cCliente";
@@ -217,9 +206,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -237,7 +225,6 @@
         private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.DataGridView ConsultadataGridView;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox checkBox;
     }

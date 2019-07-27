@@ -209,6 +209,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoFinal_AdrielV.Properties.Resources._92786425_plantilla_de_logotipo_de_muebles_icono_de_muebles_logotipo_de_la_tienda_de_muebles_diseño_de_muebles_mu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(431, 369);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);

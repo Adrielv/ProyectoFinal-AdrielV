@@ -38,12 +38,12 @@
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
             this.EmailtextBox = new System.Windows.Forms.TextBox();
-            this.TelefonotextBox = new System.Windows.Forms.TextBox();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Elimianarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -121,13 +121,6 @@
             this.EmailtextBox.Size = new System.Drawing.Size(217, 22);
             this.EmailtextBox.TabIndex = 12;
             // 
-            // TelefonotextBox
-            // 
-            this.TelefonotextBox.Location = new System.Drawing.Point(139, 212);
-            this.TelefonotextBox.Name = "TelefonotextBox";
-            this.TelefonotextBox.Size = new System.Drawing.Size(217, 22);
-            this.TelefonotextBox.TabIndex = 13;
-            // 
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.save_as;
@@ -184,16 +177,26 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
+            // TelefonomaskedTextBox
+            // 
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(139, 212);
+            this.TelefonomaskedTextBox.Mask = "000-000-0000";
+            this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(217, 22);
+            this.TelefonomaskedTextBox.TabIndex = 18;
+            // 
             // rProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoFinal_AdrielV.Properties.Resources._92786425_plantilla_de_logotipo_de_muebles_icono_de_muebles_logotipo_de_la_tienda_de_muebles_diseño_de_muebles_mu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(433, 349);
+            this.Controls.Add(this.TelefonomaskedTextBox);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Elimianarbutton);
             this.Controls.Add(this.Nuevobutton);
-            this.Controls.Add(this.TelefonotextBox);
             this.Controls.Add(this.EmailtextBox);
             this.Controls.Add(this.DirecciontextBox);
             this.Controls.Add(this.IDnumericUpDown);
@@ -223,11 +226,11 @@
         private System.Windows.Forms.NumericUpDown IDnumericUpDown;
         private System.Windows.Forms.TextBox DirecciontextBox;
         private System.Windows.Forms.TextBox EmailtextBox;
-        private System.Windows.Forms.TextBox TelefonotextBox;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Elimianarbutton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
     }
 }

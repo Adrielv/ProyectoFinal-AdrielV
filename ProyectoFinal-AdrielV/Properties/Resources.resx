@@ -121,17 +121,23 @@
   <data name="file_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file_edit.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="attachment_89074470" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attachment_89074470.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7c43b72afd8d357fc23dbca409c5adcf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7c43b72afd8d357fc23dbca409c5adcf.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="file_exclude" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file_exclude.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kfind" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kfind.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fax" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fax.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_as" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_as.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="abstract-chair-symbol-creative-furniture-logo-design-profile-view-91736431" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abstract-chair-symbol-creative-furniture-logo-design-profile-view-91736431.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,13 +145,13 @@
   <data name="adim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adim.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save_as" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_as.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7c43b72afd8d357fc23dbca409c5adcf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7c43b72afd8d357fc23dbca409c5adcf.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="92786425-plantilla-de-logotipo-de-muebles-icono-de-muebles-logotipo-de-la-tienda-de-muebles-diseño-de-muebles-mu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\92786425-plantilla-de-logotipo-de-muebles-icono-de-muebles-logotipo-de-la-tienda-de-muebles-diseño-de-muebles-mu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

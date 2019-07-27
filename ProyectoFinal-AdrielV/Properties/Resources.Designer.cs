@@ -73,6 +73,17 @@ namespace ProyectoFinal_AdrielV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _92786425_plantilla_de_logotipo_de_muebles_icono_de_muebles_logotipo_de_la_tienda_de_muebles_diseño_de_muebles_mu {
+            get {
+                object obj = ResourceManager.GetObject("92786425-plantilla-de-logotipo-de-muebles-icono-de-muebles-logotipo-de-la-tienda-" +
+                        "de-muebles-diseño-de-muebles-mu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap abstract_chair_symbol_creative_furniture_logo_design_profile_view_91736431 {
             get {
                 object obj = ResourceManager.GetObject("abstract-chair-symbol-creative-furniture-logo-design-profile-view-91736431", resourceCulture);
@@ -96,6 +107,16 @@ namespace ProyectoFinal_AdrielV.Properties {
         internal static System.Drawing.Bitmap adim {
             get {
                 object obj = ResourceManager.GetObject("adim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap attachment_89074470 {
+            get {
+                object obj = ResourceManager.GetObject("attachment_89074470", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

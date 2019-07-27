@@ -45,12 +45,12 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.EmailtextBox = new System.Windows.Forms.TextBox();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
-            this.TelefonotextBox = new System.Windows.Forms.TextBox();
-            this.CelulartextBox = new System.Windows.Forms.TextBox();
-            this.CedulatextBox = new System.Windows.Forms.TextBox();
             this.NombrestextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.FechaCreaciondateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.CedulamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.CelularmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -195,27 +195,6 @@
             this.DirecciontextBox.Size = new System.Drawing.Size(213, 22);
             this.DirecciontextBox.TabIndex = 13;
             // 
-            // TelefonotextBox
-            // 
-            this.TelefonotextBox.Location = new System.Drawing.Point(143, 224);
-            this.TelefonotextBox.Name = "TelefonotextBox";
-            this.TelefonotextBox.Size = new System.Drawing.Size(213, 22);
-            this.TelefonotextBox.TabIndex = 14;
-            // 
-            // CelulartextBox
-            // 
-            this.CelulartextBox.Location = new System.Drawing.Point(143, 262);
-            this.CelulartextBox.Name = "CelulartextBox";
-            this.CelulartextBox.Size = new System.Drawing.Size(213, 22);
-            this.CelulartextBox.TabIndex = 15;
-            // 
-            // CedulatextBox
-            // 
-            this.CedulatextBox.Location = new System.Drawing.Point(143, 109);
-            this.CedulatextBox.Name = "CedulatextBox";
-            this.CedulatextBox.Size = new System.Drawing.Size(213, 22);
-            this.CedulatextBox.TabIndex = 16;
-            // 
             // NombrestextBox
             // 
             this.NombrestextBox.Location = new System.Drawing.Point(143, 67);
@@ -241,17 +220,43 @@
             this.FechaCreaciondateTimePicker.Size = new System.Drawing.Size(213, 22);
             this.FechaCreaciondateTimePicker.TabIndex = 19;
             // 
+            // CedulamaskedTextBox
+            // 
+            this.CedulamaskedTextBox.Location = new System.Drawing.Point(143, 109);
+            this.CedulamaskedTextBox.Mask = "0-0000000-0";
+            this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
+            this.CedulamaskedTextBox.Size = new System.Drawing.Size(213, 22);
+            this.CedulamaskedTextBox.TabIndex = 20;
+            // 
+            // TelefonomaskedTextBox
+            // 
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(145, 229);
+            this.TelefonomaskedTextBox.Mask = "000-000-0000";
+            this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(211, 22);
+            this.TelefonomaskedTextBox.TabIndex = 21;
+            // 
+            // CelularmaskedTextBox
+            // 
+            this.CelularmaskedTextBox.Location = new System.Drawing.Point(143, 265);
+            this.CelularmaskedTextBox.Mask = "000-000-0000";
+            this.CelularmaskedTextBox.Name = "CelularmaskedTextBox";
+            this.CelularmaskedTextBox.Size = new System.Drawing.Size(213, 22);
+            this.CelularmaskedTextBox.TabIndex = 22;
+            // 
             // rCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 457);
+            this.BackgroundImage = global::ProyectoFinal_AdrielV.Properties.Resources._92786425_plantilla_de_logotipo_de_muebles_icono_de_muebles_logotipo_de_la_tienda_de_muebles_diseño_de_muebles_mu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(388, 422);
+            this.Controls.Add(this.CelularmaskedTextBox);
+            this.Controls.Add(this.TelefonomaskedTextBox);
+            this.Controls.Add(this.CedulamaskedTextBox);
             this.Controls.Add(this.FechaCreaciondateTimePicker);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.NombrestextBox);
-            this.Controls.Add(this.CedulatextBox);
-            this.Controls.Add(this.CelulartextBox);
-            this.Controls.Add(this.TelefonotextBox);
             this.Controls.Add(this.DirecciontextBox);
             this.Controls.Add(this.EmailtextBox);
             this.Controls.Add(this.Guardarbutton);
@@ -288,9 +293,6 @@
         private System.Windows.Forms.NumericUpDown IDnumericUpDown;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
         private System.Windows.Forms.TextBox NombrestextBox;
-        private System.Windows.Forms.TextBox CedulatextBox;
-        private System.Windows.Forms.TextBox CelulartextBox;
-        private System.Windows.Forms.TextBox TelefonotextBox;
         private System.Windows.Forms.TextBox DirecciontextBox;
         private System.Windows.Forms.TextBox EmailtextBox;
         private System.Windows.Forms.Button Guardarbutton;
@@ -299,5 +301,8 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker FechaCreaciondateTimePicker;
+        private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox CelularmaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
     }
 }

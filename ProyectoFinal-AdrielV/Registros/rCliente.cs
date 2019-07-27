@@ -24,11 +24,11 @@ namespace ProyectoFinal_AdrielV.Registros
 
             IDnumericUpDown.Value = 0;
             NombrestextBox.Text = string.Empty;
-            CedulatextBox.Text = string.Empty;
+            CedulamaskedTextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             EmailtextBox.Text = string.Empty;
-            TelefonotextBox.Text = string.Empty;
-            CelulartextBox.Text = string.Empty;
+            TelefonomaskedTextBox.Text = string.Empty;
+            CelularmaskedTextBox.Text = string.Empty;
             FechaCreaciondateTimePicker.Value = DateTime.Now;
 
             MyErrorProvider.Clear();
@@ -40,11 +40,11 @@ namespace ProyectoFinal_AdrielV.Registros
 
             clientes.ClienteId = Convert.ToInt32(IDnumericUpDown.Value);
             clientes.Nombres = NombrestextBox.Text;
-            clientes.Cedula = CedulatextBox.Text;
+            clientes.Cedula = CedulamaskedTextBox.Text;
             clientes.Email = EmailtextBox.Text;
             clientes.Direccion = DirecciontextBox.Text;
-            clientes.Telefono = TelefonotextBox.Text;
-            clientes.Celular = CelulartextBox.Text;
+            clientes.Telefono = TelefonomaskedTextBox.Text;
+            clientes.Celular = CelularmaskedTextBox.Text;
             clientes.FechaCreacion = FechaCreaciondateTimePicker.Value;
 
             return clientes;
@@ -54,11 +54,11 @@ namespace ProyectoFinal_AdrielV.Registros
         {
             IDnumericUpDown.Value = clientes.ClienteId;
             NombrestextBox.Text = clientes.Nombres;
-            CedulatextBox.Text = clientes.Cedula;
+            CedulamaskedTextBox.Text = clientes.Cedula;
             DirecciontextBox.Text = clientes.Direccion;
             EmailtextBox.Text = clientes.Email;
-            TelefonotextBox.Text = clientes.Telefono;
-            CelulartextBox.Text = clientes.Celular;
+            TelefonomaskedTextBox.Text = clientes.Telefono;
+           CelularmaskedTextBox.Text = clientes.Celular;
             FechaCreaciondateTimePicker.Value = clientes.FechaCreacion;
         }
       
@@ -92,9 +92,9 @@ namespace ProyectoFinal_AdrielV.Registros
                 MyErrorProvider.SetError(NombrestextBox, "No puede ser vacio.");
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(CedulatextBox.Text))
+            if (!CedulamaskedTextBox.MaskCompleted)
             {
-                MyErrorProvider.SetError(CedulatextBox, "No puede ser vacio.");
+                MyErrorProvider.SetError(CedulamaskedTextBox, "No puede ser vacio.");
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(DirecciontextBox.Text))
@@ -107,14 +107,14 @@ namespace ProyectoFinal_AdrielV.Registros
                 MyErrorProvider.SetError(EmailtextBox, "No puede ser vacio.");
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(TelefonotextBox.Text))
+            if (!TelefonomaskedTextBox.MaskCompleted)
             {
-                MyErrorProvider.SetError(TelefonotextBox, "No puede ser vacio.");
+                MyErrorProvider.SetError(TelefonomaskedTextBox, "No puede ser vacio.");
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(CelulartextBox.Text))
+            if (!CedulamaskedTextBox.MaskCompleted)
             {
-                MyErrorProvider.SetError(CelulartextBox, "No puede ser vacio.");
+                MyErrorProvider.SetError(CedulamaskedTextBox, "No puede ser vacio.");
                 paso = false;
             }
        

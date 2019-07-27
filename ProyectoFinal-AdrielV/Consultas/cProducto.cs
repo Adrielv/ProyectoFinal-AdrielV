@@ -188,5 +188,7 @@ namespace ProyectoFinal_AdrielV.Consultas
                 ConsultadataGridView.DataSource = listado;
             }
         }
+
+     
     }
 }
