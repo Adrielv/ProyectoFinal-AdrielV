@@ -79,6 +79,7 @@ namespace ProyectoFinal_AdrielV.Registros
             PedidocomboBox.Text = pedidos.FormaPedido;
             ClientecomboBox.Text = Convert.ToString(pedidos.ClienteId);
             FechadateTimePicker.Value = pedidos.FechaPedido;    //falta precio y cantidad
+           // PrecionumericUpDown.Value = 
             ITBISnumericUpDown.Value = pedidos.ITBIS;
             subTotalnumericUpDown.Value = pedidos.SubTotal;
             TotalnumericUpDown.Value = pedidos.Total;
@@ -172,7 +173,7 @@ namespace ProyectoFinal_AdrielV.Registros
                     MessageBox.Show("No se puede modificar un Estudiante que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-              //  paso = PedidosBLL.Modificar(pedidos);
+               paso = PedidosBLL.Modificar(pedidos);
 
             }
 
@@ -180,7 +181,7 @@ namespace ProyectoFinal_AdrielV.Registros
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            LlenaClase();
+          //  LlenaClase();
             Limpiar();
         }
 
@@ -188,7 +189,7 @@ namespace ProyectoFinal_AdrielV.Registros
         {
             RepositorioBase<Pedidos> db = new RepositorioBase<Pedidos>();
 
-            Limpiar();
+           
 
             if (IDnumericUpDown.Value > 0)
             {
@@ -206,6 +207,8 @@ namespace ProyectoFinal_AdrielV.Registros
                 MyErrorProvider.SetError(IDnumericUpDown, "Selecione que pedido quiere eliminar");
                 IDnumericUpDown.Focus();
             }
+
+            Limpiar();
         }
 
         private void EliminarLineabutton_Click(object sender, EventArgs e)
@@ -234,7 +237,7 @@ namespace ProyectoFinal_AdrielV.Registros
             this.Detalle.Add(new PedidoDetalle()
             {
 
-                Producto = Convert.ToString(ProductocomboBox.SelectedValue),
+                ProductoId = (int)ProductocomboBox.SelectedValue,
                 Precio = Convert.ToDecimal(PrecionumericUpDown.Value),
                 Cantidad = (int)(CantidadnumericUpDown.Value),
                 Id = (int)IDnumericUpDown.Value,

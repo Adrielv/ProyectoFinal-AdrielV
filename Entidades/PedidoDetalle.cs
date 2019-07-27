@@ -12,7 +12,9 @@ namespace Entidades
         [Key]
         public int Id { get; set; }
 
-        public string Producto { get; set; }
+     
+
+        public int ProductoId { get; set; }
 
         public int Cantidad { get; set; }
 
@@ -23,7 +25,8 @@ namespace Entidades
         public PedidoDetalle()
         {
             Id = 0;
-            Producto = string.Empty;
+         
+            ProductoId = 0;
             Cantidad = 0;
             Precio = 0;
             Impuesto = 0;

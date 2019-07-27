@@ -16,7 +16,7 @@ namespace ProyectoFinal_AdrielV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new  Registros.rLogIn());
+            Application.Run(new Menu() /*Registros.rLogIn()*/);
         }
     }
 }

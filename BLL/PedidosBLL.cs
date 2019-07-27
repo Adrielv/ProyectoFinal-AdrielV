@@ -11,77 +11,22 @@ namespace BLL
 {
     public class PedidosBLL
     {
-     /*   public static bool Modificar(Pedidos pedidos)
-        {
-            bool paso = false;
-            Contexto db = new Contexto();
-         //   RepositorioBase<Estudiante> dbEst = new RepositorioBase<Estudiantes>();
-
-
-            try
-            {
-
-                var estudiante = dbEst.Buscar(inscripcion.EstudianteId);
-                var anterior = new RepositorioBase<Inscripcion>().Buscar(inscripcion.InscripcionId);
-                estudiante.Balance -= anterior.MontoTotal;
-
-                foreach (var item in anterior.Asignaturas)
-                {
-                    if (!inscripcion.Asignaturas.Any(A => A.Id == item.Id))
-                    {
-                        db.Entry(item).State = EntityState.Deleted;
-
-                    }
-
-                }
-
-                foreach (var item in inscripcion.Asignaturas)
-                {
-                    if (item.Id == 0)
-                    {
-                        db.Entry(item).State = EntityState.Added;
-                    }
-                    else
-                    {
-                        db.Entry(item).State = EntityState.Modified;
-                    }
-                }
-
-
-                inscripcion.CalcularMonto();
-                estudiante.Balance += inscripcion.MontoTotal;
-                dbEst.Modificar(estudiante);
-
-                db.Entry(inscripcion).State = EntityState.Modified;
-
-                paso = db.SaveChanges() > 0;
-
-
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
-
-            return paso;
-        }*/
         public static bool Guardar(Pedidos pedidos)
         {
             bool paso = false;
+            RepositorioBase<Productos> prod = new RepositorioBase<Productos>();
             Contexto db = new Contexto();
             try
             {
-              //  RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>();
-
                 if (db.Pedidos.Add(pedidos) != null)
                 {
-                  /* var estudiante = dbEst.Buscar(inscripcion.EstudianteId);
-
-                    inscripcion.CalcularMonto();
-                    estudiante.Balance += inscripcion.MontoTotal;*/
+                    foreach (var item in pedidos.Productos)
+                    {
+                        var producto = prod.Buscar(item.ProductoId);
+                        producto.Cantidad -= item.Cantidad;
+                        prod.Modificar(producto);
+                    }
                     paso = db.SaveChanges() > 0;
-                  //  dbEst.Modificar(estudiante);
                 }
 
             }
@@ -89,22 +34,23 @@ namespace BLL
             {
                 throw;
             }
-
             return paso;
         }
-
         public static bool Eliminar(int id)
         {
             bool paso = false;
             Contexto db = new Contexto();
-         //   RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>();
+            RepositorioBase<Productos> prod = new RepositorioBase<Productos>();
             try
             {
-                var Inscripcion = db.Pedidos.Find(id);
-            //    var estudiante = dbEst.Buscar(Inscripcion.EstudianteId);
-            //    estudiante.Balance = estudiante.Balance - Inscripcion.MontoTotal;
-             //   dbEst.Modificar(estudiante);
-                db.Entry(Inscripcion).State = EntityState.Deleted;
+                var venta = db.Pedidos.Find(id);
+                foreach (var item in venta.Productos)
+                {
+                    var producto = prod.Buscar(item.ProductoId);
+                    producto.Cantidad += item.Cantidad;
+                    prod.Modificar(producto);
+                }
+                db.Entry(venta).State = EntityState.Deleted;
                 paso = (db.SaveChanges() > 0);
             }
             catch (Exception)
@@ -117,5 +63,52 @@ namespace BLL
             }
             return paso;
         }
+        public static bool Modificar(Pedidos pedidos)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+            RepositorioBase<Pedidos> vent = new RepositorioBase<Pedidos>();
+            RepositorioBase<Productos> prod = new RepositorioBase<Productos>();
+            try
+            {
+                var pedidoss = vent.Buscar(pedidos.PedidosId);
+
+
+                if (pedidos != null)
+                {
+                    foreach (var item in pedidos.Productos)
+                    {
+                        db.Productos.Find(item.ProductoId).Cantidad += item.Cantidad;
+
+                        if (!pedidos.Productos.ToList().Exists(v => v.Id == item.Id))
+                        {
+
+                            db.Entry(item).State = EntityState.Deleted;
+                        }
+                    }
+
+                    foreach (var item in pedidos.Productos)
+                    {
+                        db.Productos.Find(item.ProductoId).Cantidad -= item.Cantidad;
+                        var estado = item.Id > 0 ? EntityState.Modified : EntityState.Added;
+                        db.Entry(item).State = estado;
+                    }
+
+                    db.Entry(pedidos).State = EntityState.Modified;
+                }
+
+                if (db.SaveChanges() > 0)
+                {
+                    paso = true;
+                }
+                db.Dispose();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
+
     }
 }
