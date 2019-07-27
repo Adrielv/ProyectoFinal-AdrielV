@@ -226,5 +226,11 @@ namespace ProyectoFinal_AdrielV.Registros
                 GanancianumericUpDown.Value = 0;
             }
         }
+
+        private void AgregarProveedorbutton_Click(object sender, EventArgs e)
+        {
+            Registros.rProveedores pr = new Registros.rProveedores();
+            pr.Show();
+        }
     }
 }

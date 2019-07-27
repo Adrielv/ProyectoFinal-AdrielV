@@ -61,6 +61,7 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
+            this.AgregarClientebutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TotalnumericUpDown)).BeginInit();
@@ -441,11 +442,23 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
+            // AgregarClientebutton
+            // 
+            this.AgregarClientebutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.add;
+            this.AgregarClientebutton.Location = new System.Drawing.Point(330, 127);
+            this.AgregarClientebutton.Name = "AgregarClientebutton";
+            this.AgregarClientebutton.Size = new System.Drawing.Size(47, 40);
+            this.AgregarClientebutton.TabIndex = 27;
+            this.AgregarClientebutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AgregarClientebutton.UseVisualStyleBackColor = true;
+            this.AgregarClientebutton.Click += new System.EventHandler(this.AgregarClientebutton_Click);
+            // 
             // rPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 785);
+            this.Controls.Add(this.AgregarClientebutton);
             this.Controls.Add(this.PedidocomboBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Nuevobutton);
@@ -511,5 +524,6 @@
         private System.Windows.Forms.ComboBox PedidocomboBox;
         private System.Windows.Forms.NumericUpDown CantidadaExistentenumericUpDown;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button AgregarClientebutton;
     }
 }

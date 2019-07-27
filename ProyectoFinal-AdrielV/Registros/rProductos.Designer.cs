@@ -53,6 +53,7 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.ITBISnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AgregarProveedorbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
@@ -198,9 +199,9 @@
             // 
             this.ProveedorescomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProveedorescomboBox.FormattingEnabled = true;
-            this.ProveedorescomboBox.Location = new System.Drawing.Point(144, 358);
+            this.ProveedorescomboBox.Location = new System.Drawing.Point(143, 367);
             this.ProveedorescomboBox.Name = "ProveedorescomboBox";
-            this.ProveedorescomboBox.Size = new System.Drawing.Size(234, 24);
+            this.ProveedorescomboBox.Size = new System.Drawing.Size(157, 24);
             this.ProveedorescomboBox.TabIndex = 13;
             // 
             // FechaIngresodateTimePicker
@@ -215,7 +216,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 358);
+            this.label8.Location = new System.Drawing.Point(34, 367);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 17);
             this.label8.TabIndex = 15;
@@ -242,7 +243,7 @@
             // 
             this.Eliminarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_exclude;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(280, 406);
+            this.Eliminarbutton.Location = new System.Drawing.Point(278, 420);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(98, 61);
             this.Eliminarbutton.TabIndex = 18;
@@ -255,7 +256,7 @@
             // 
             this.Guardarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.save_as;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(156, 406);
+            this.Guardarbutton.Location = new System.Drawing.Point(154, 420);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(98, 61);
             this.Guardarbutton.TabIndex = 17;
@@ -268,7 +269,7 @@
             // 
             this.Nuevobutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_edit;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(37, 406);
+            this.Nuevobutton.Location = new System.Drawing.Point(35, 420);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(98, 61);
             this.Nuevobutton.TabIndex = 16;
@@ -306,13 +307,25 @@
             this.ITBISnumericUpDown.Size = new System.Drawing.Size(235, 22);
             this.ITBISnumericUpDown.TabIndex = 21;
             // 
+            // AgregarProveedorbutton
+            // 
+            this.AgregarProveedorbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.add;
+            this.AgregarProveedorbutton.Location = new System.Drawing.Point(329, 358);
+            this.AgregarProveedorbutton.Name = "AgregarProveedorbutton";
+            this.AgregarProveedorbutton.Size = new System.Drawing.Size(47, 40);
+            this.AgregarProveedorbutton.TabIndex = 28;
+            this.AgregarProveedorbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AgregarProveedorbutton.UseVisualStyleBackColor = true;
+            this.AgregarProveedorbutton.Click += new System.EventHandler(this.AgregarProveedorbutton_Click);
+            // 
             // rProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoFinal_AdrielV.Properties.Resources._92786425_plantilla_de_logotipo_de_muebles_icono_de_muebles_logotipo_de_la_tienda_de_muebles_diseño_de_muebles_mu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(412, 477);
+            this.ClientSize = new System.Drawing.Size(409, 493);
+            this.Controls.Add(this.AgregarProveedorbutton);
             this.Controls.Add(this.ITBISnumericUpDown);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Buscarbutton);
@@ -375,5 +388,6 @@
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
         private System.Windows.Forms.NumericUpDown ITBISnumericUpDown;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button AgregarProveedorbutton;
     }
 }

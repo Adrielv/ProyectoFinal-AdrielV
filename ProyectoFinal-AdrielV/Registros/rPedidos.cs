@@ -24,7 +24,7 @@ namespace ProyectoFinal_AdrielV.Registros
             Limpiar();
             PedidocomboBox.Text = null;
             ClientecomboBox.Text = null;
-         //   ProductocomboBox.Text = null;
+       
             this.Detalle = new List<PedidoDetalle>();
         }
         private void Limpiar()
@@ -74,7 +74,7 @@ namespace ProyectoFinal_AdrielV.Registros
            
             ClientecomboBox.Text = pedidos.Cliente;
             FechadateTimePicker.Value = pedidos.FechaPedido;    //falta precio y cantidad
-           // PrecionumericUpDown.Value = 
+        
             ITBISnumericUpDown.Value = pedidos.ITBIS;
             subTotalnumericUpDown.Value = pedidos.SubTotal;
             TotalnumericUpDown.Value = pedidos.Total;
@@ -176,7 +176,7 @@ namespace ProyectoFinal_AdrielV.Registros
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //  LlenaClase();
+          
             this.Refresh();
             Limpiar();
             
@@ -308,6 +308,12 @@ namespace ProyectoFinal_AdrielV.Registros
                 subtotal += item.Precio * item.Cantidad;
             }
            subTotalnumericUpDown.Text = subtotal.ToString();
+        }
+
+        private void AgregarClientebutton_Click(object sender, EventArgs e)
+        {
+            Registros.rCliente c = new Registros.rCliente();
+            c.Show();
         }
     }
 }
