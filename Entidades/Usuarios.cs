@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace Entidades
 {
@@ -12,6 +13,7 @@ namespace Entidades
         [Key]
         public int UsuarioId { get; set; }
         public string Usuario { get; set; }
+        [Browsable(false)]
         public string Clave { get; set; }
         public string Nombres { get; set; }
         public string Email { get; set; }

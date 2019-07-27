@@ -47,12 +47,7 @@ namespace ProyectoFinal_AdrielV
             pe.Show();
         }
 
-        private void ClienteToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Consultas.cCliente cl = new Consultas.cCliente();
-            cl.Show();
-        }
-
+ 
         private void PedidosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Consultas.cPedidos pe = new Consultas.cPedidos();
@@ -71,10 +66,10 @@ namespace ProyectoFinal_AdrielV
             lo.Show();
         }
 
-        private void ProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ClienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Registros.rProveedores pr = new Registros.rProveedores();
-            pr.Show();
+            Consultas.cCliente clw = new Consultas.cCliente();
+            clw.Show();
         }
     }
 }

@@ -55,7 +55,7 @@
             "Todo",
             "ID",
             "Email",
-            "Cedula",
+            "Usuarios",
             "Nombres"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(51, 29);
             this.FiltrocomboBox.Name = "FiltrocomboBox";

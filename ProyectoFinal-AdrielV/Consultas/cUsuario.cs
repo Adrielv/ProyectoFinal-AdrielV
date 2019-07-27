@@ -56,7 +56,7 @@ namespace ProyectoFinal_AdrielV.Consultas
                             }
                             break;
 
-                        case "Usuario":
+                        case "Usuarios":
                             listado = r.GetList(p => p.Usuario.Contains(CriteriotextBox.Text));
                             break;
                         case "Email":
@@ -117,7 +117,7 @@ namespace ProyectoFinal_AdrielV.Consultas
                             }
                             break;
 
-                        case "Usuario":
+                        case "Usuarios":
                             listado = r.GetList(p => p.Usuario.Contains(CriteriotextBox.Text));
                             break;
                         case "Email":

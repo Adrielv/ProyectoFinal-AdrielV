@@ -57,19 +57,9 @@ namespace ProyectoFinal_AdrielV.Consultas
                                 listado = r.GetList(p => p.Descripcion.Contains(CriteriotextBox.Text));
                             }
                             break;
-                        case "Cantidad":
-                            int parsee;
-                            if (!int.TryParse(CriteriotextBox.Text, out parsee))
-                            {
-                                MessageBox.Show("Solo numeros.");
-                            }
-                            else
-                            {
-                                int cantidad = Convert.ToInt32(CriteriotextBox.Text);
-                                listado = r.GetList(p => p.Cantidad == cantidad);
-                            }
-                            break;
-                        case "Precio":
+                  
+                            
+                        case "Precios":
                             int parseee;
                             if (!int.TryParse(CriteriotextBox.Text, out parseee))
                             {
@@ -81,9 +71,20 @@ namespace ProyectoFinal_AdrielV.Consultas
                                 listado = r.GetList(p => p.Precio == precio);
                             }
                             break;
+                        case "Ganancias":
+                            int parseeee;
+                            if (!int.TryParse(CriteriotextBox.Text, out parseeee))
+                            {
+                                MessageBox.Show("Solo numeros.");
+                            }
+                            else
+                            {
+                                int Ganacia = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = r.GetList(p => p.Ganancia == Ganacia);
+                            }
+                            break;
 
 
-                       
                     }
                     listado = listado.Where(c => c.FechaIngreso.Date >= DesdedateTimePicker.Value.Date && c.FechaIngreso.Date <= HastadateTimePicker.Value.Date).ToList();
                 }
@@ -138,19 +139,8 @@ namespace ProyectoFinal_AdrielV.Consultas
                                 listado = r.GetList(p => p.Descripcion.Contains(CriteriotextBox.Text));
                             }
                             break;
-                        case "Cantidad":
-                            int parsee;
-                            if (!int.TryParse(CriteriotextBox.Text, out parsee))
-                            {
-                                MessageBox.Show("Solo numeros.");
-                            }
-                            else
-                            {
-                                int cantidad = Convert.ToInt32(CriteriotextBox.Text);
-                                listado = r.GetList(p => p.Cantidad == cantidad);
-                            }
-                            break;
-                        case "Precio":
+                   
+                        case "Precios":
                             int parseee;
                             if (!int.TryParse(CriteriotextBox.Text, out parseee))
                             {
@@ -162,6 +152,19 @@ namespace ProyectoFinal_AdrielV.Consultas
                                 listado = r.GetList(p => p.Precio == precio);
                             }
                             break;
+                        case "Ganancias":
+                            int parseeee;
+                            if (!int.TryParse(CriteriotextBox.Text, out parseeee))
+                            {
+                                MessageBox.Show("Solo numeros.");
+                            }
+                            else
+                            {
+                                int Ganacia = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = r.GetList(p => p.Ganancia == Ganacia);
+                            }
+                            break;
+
                     }
                 }
                 else

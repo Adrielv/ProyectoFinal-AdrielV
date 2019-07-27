@@ -45,20 +45,13 @@ namespace ProyectoFinal_AdrielV.Consultas
                                 listado = r.GetList(p => p.PedidosId == id);
                             }
                             break;
-                        case "ClientesId":
-                            int parsee;
-                            if (!int.TryParse(CriteriotextBox.Text, out parsee))
-                            {
-                                MessageBox.Show("Solo numeros.");
-                            }
-                            else
-                            {
-                                int clienteid = Convert.ToInt32(CriteriotextBox.Text);
-                      //          listado = r.GetList(p => p.ClienteId == clienteid);
-                            }
+                        case "Clientes":
+                           
+                            listado = r.GetList(p => p.Cliente.Contains(CriteriotextBox.Text));
                             break;
+                          
 
-                        case "FormaPedido":
+                        case "FormaPedidos":
                             listado = r.GetList(p => p.FormaPedido.Contains(CriteriotextBox.Text));
                             break;
                     }
@@ -102,23 +95,14 @@ namespace ProyectoFinal_AdrielV.Consultas
                             else
                             {
                                 int id = Convert.ToInt32(CriteriotextBox.Text);
-                      //          listado = r.GetList(p => p.ClienteId == id);
+                                listado = r.GetList(p => p.PedidosId == id);
                             }
                             break;
-                        case "ClientesId":
-                            int parsee;
-                            if (!int.TryParse(CriteriotextBox.Text, out parsee))
-                            {
-                                MessageBox.Show("Solo numeros.");
-                            }
-                            else
-                            {
-                                int clienteid = Convert.ToInt32(CriteriotextBox.Text);
-                    //            listado = r.GetList(p => p.ClienteId == clienteid);
-                            }
+                        case "Clientes":
+                            listado = r.GetList(p => p.Cliente.Contains(CriteriotextBox.Text));
                             break;
 
-                        case "FormaPedido":
+                        case "FormaPedidos":
                             listado = r.GetList(p => p.FormaPedido.Contains(CriteriotextBox.Text));
                             break;
 

@@ -111,7 +111,9 @@
             "ID",
             "Email",
             "Cedula",
-            "Nombres"});
+            "Nombres",
+            "Telefono",
+            "Celular"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(644, 41);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(121, 24);

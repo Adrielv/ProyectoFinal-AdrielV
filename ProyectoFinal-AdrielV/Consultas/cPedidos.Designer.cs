@@ -54,9 +54,8 @@
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "Todo",
             "ID",
-            "Email",
-            "Cedula",
-            "Nombres"});
+            "Clientes",
+            "FormaPedidos"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(46, 34);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(121, 24);

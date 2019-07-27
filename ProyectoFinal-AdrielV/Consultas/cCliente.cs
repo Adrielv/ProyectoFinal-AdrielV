@@ -46,14 +46,8 @@ namespace ProyectoFinal_AdrielV.Consultas
                             }
                             break;
                         case "Nombres":
-                            if (!System.Text.RegularExpressions.Regex.IsMatch(CriteriotextBox.Text, "^[a-zA-Z ]"))
-                            {
-                                MessageBox.Show("No numeros en los nombres.");
-                            }
-                            else
-                            {
+                           
                                 listado = r.GetList(p => p.Nombres.Contains(CriteriotextBox.Text));
-                            }
                             break;
 
                         case "Cedula":
@@ -61,6 +55,13 @@ namespace ProyectoFinal_AdrielV.Consultas
                             break;
                         case "Email":
                             listado = r.GetList(p => p.Email.Contains(CriteriotextBox.Text));
+                            break;
+                        case "Celular":
+                           
+                                listado = r.GetList(p => p.Celular.Contains(CriteriotextBox.Text));                           
+                            break;
+                        case "Telefono":
+                            listado = r.GetList(p => p.Telefono.Contains(CriteriotextBox.Text));
                             break;
                     }
                     listado = listado.Where(c => c.FechaCreacion.Date >= DesdedateTimePicker.Value.Date && c.FechaCreacion.Date <= HastadateTimePicker.Value.Date).ToList();
@@ -122,6 +123,13 @@ namespace ProyectoFinal_AdrielV.Consultas
                             break;
                         case "Email":
                             listado = r.GetList(p => p.Email.Contains(CriteriotextBox.Text));
+                            break;
+                        case "Celular":
+
+                            listado = r.GetList(p => p.Celular.Contains(CriteriotextBox.Text));
+                            break;
+                        case "Telefono":
+                            listado = r.GetList(p => p.Telefono.Contains(CriteriotextBox.Text));
                             break;
                     }
                 }
