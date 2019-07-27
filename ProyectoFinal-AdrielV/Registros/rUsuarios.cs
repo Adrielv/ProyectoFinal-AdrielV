@@ -26,6 +26,7 @@ namespace ProyectoFinal_AdrielV.Registros
             NombrestextBox.Text = string.Empty;
             NombreDeUsuariotextBox.Text = string.Empty;
             ClavetextBox.Text = string.Empty;
+            ConfirmarClavetextBox.Text = string.Empty;
             EmailtextBox.Text = string.Empty;
             FechaDeCreaciondateTimePicker.Value = DateTime.Now;
             MyErrorProvider.Clear();
@@ -51,6 +52,7 @@ namespace ProyectoFinal_AdrielV.Registros
             NombrestextBox.Text = usuarios.Nombres;
             NombreDeUsuariotextBox.Text = usuarios.Usuario;
             ClavetextBox.Text = usuarios.Clave;
+            ConfirmarClavetextBox.Text = usuarios.Clave;
             EmailtextBox.Text = usuarios.Email;
             FechaDeCreaciondateTimePicker.Value = usuarios.FechaCreacion;
         }
@@ -79,7 +81,7 @@ namespace ProyectoFinal_AdrielV.Registros
             }
             return paso;
         }
-        public static bool RepetirEmail(string descripcion)
+        public static bool RepetirUsuario(string descripcion)
         {
             RepositorioBase<Usuarios> r = new RepositorioBase<Usuarios>();
             bool paso = false;
@@ -87,7 +89,8 @@ namespace ProyectoFinal_AdrielV.Registros
 
             try
             {
-                if (db.Usuarios.Any(p => p.Email.Equals(descripcion)))
+              
+                if (db.Usuarios.Any(p => p.Usuario.Equals(descripcion)))
                 {
                     paso = true;
                 }
@@ -102,6 +105,12 @@ namespace ProyectoFinal_AdrielV.Registros
         {
             bool paso = true;
             MyErrorProvider.Clear();
+
+            if (RepetirUsuario(NombreDeUsuariotextBox.Text))
+            {
+                MyErrorProvider.SetError(NombreDeUsuariotextBox, "No se debe repetir los usuarios.");
+                paso = false;
+            }
 
             if (string.IsNullOrWhiteSpace(NombrestextBox.Text))
             {
@@ -133,11 +142,12 @@ namespace ProyectoFinal_AdrielV.Registros
                 MyErrorProvider.SetError(NombreDeUsuariotextBox, "No se debe repetir los usuarios.");
                 paso = false;
             }
-            if (RepetirEmail(EmailtextBox.Text))
+            if (ConfirmarClavetextBox.Text != ClavetextBox.Text)
             {
-                MyErrorProvider.SetError(EmailtextBox, "No se debe usar el mismo email que otro.");
+                MyErrorProvider.SetError(ConfirmarClavetextBox, "La clave no coincide.");
                 paso = false;
             }
+
             return paso;
         }
         private bool ValidarEliminar()
@@ -220,6 +230,24 @@ namespace ProyectoFinal_AdrielV.Registros
             else
                 MessageBox.Show("No fue posible guardar", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             Limpiar();
+        }
+
+        private void NombrestextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void NombreDeUsuariotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void EmailtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

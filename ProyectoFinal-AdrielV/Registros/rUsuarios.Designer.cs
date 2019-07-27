@@ -47,6 +47,8 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ConfirmarClavetextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +92,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 190);
+            this.label5.Location = new System.Drawing.Point(33, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 17);
             this.label5.TabIndex = 4;
@@ -99,7 +101,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 227);
+            this.label6.Location = new System.Drawing.Point(30, 259);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 17);
             this.label6.TabIndex = 5;
@@ -118,6 +120,7 @@
             this.NombrestextBox.Name = "NombrestextBox";
             this.NombrestextBox.Size = new System.Drawing.Size(228, 22);
             this.NombrestextBox.TabIndex = 7;
+            this.NombrestextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombrestextBox_KeyPress);
             // 
             // NombreDeUsuariotextBox
             // 
@@ -125,6 +128,7 @@
             this.NombreDeUsuariotextBox.Name = "NombreDeUsuariotextBox";
             this.NombreDeUsuariotextBox.Size = new System.Drawing.Size(228, 22);
             this.NombreDeUsuariotextBox.TabIndex = 8;
+            this.NombreDeUsuariotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreDeUsuariotextBox_KeyPress);
             // 
             // ClavetextBox
             // 
@@ -135,16 +139,17 @@
             // 
             // EmailtextBox
             // 
-            this.EmailtextBox.Location = new System.Drawing.Point(167, 187);
+            this.EmailtextBox.Location = new System.Drawing.Point(167, 219);
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(228, 22);
             this.EmailtextBox.TabIndex = 10;
+            this.EmailtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailtextBox_KeyPress);
             // 
             // FechaDeCreaciondateTimePicker
             // 
             this.FechaDeCreaciondateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaDeCreaciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDeCreaciondateTimePicker.Location = new System.Drawing.Point(163, 227);
+            this.FechaDeCreaciondateTimePicker.Location = new System.Drawing.Point(163, 259);
             this.FechaDeCreaciondateTimePicker.Name = "FechaDeCreaciondateTimePicker";
             this.FechaDeCreaciondateTimePicker.Size = new System.Drawing.Size(232, 22);
             this.FechaDeCreaciondateTimePicker.TabIndex = 11;
@@ -170,7 +175,7 @@
             // 
             this.Eliminarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_exclude;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(301, 285);
+            this.Eliminarbutton.Location = new System.Drawing.Point(301, 318);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(94, 59);
             this.Eliminarbutton.TabIndex = 14;
@@ -183,7 +188,7 @@
             // 
             this.Nuevobutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.file_edit;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(30, 285);
+            this.Nuevobutton.Location = new System.Drawing.Point(30, 318);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(94, 59);
             this.Nuevobutton.TabIndex = 13;
@@ -196,7 +201,7 @@
             // 
             this.Guardarbutton.Image = global::ProyectoFinal_AdrielV.Properties.Resources.save_as;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(171, 285);
+            this.Guardarbutton.Location = new System.Drawing.Point(171, 318);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(94, 58);
             this.Guardarbutton.TabIndex = 12;
@@ -205,13 +210,31 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(30, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 17);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "ConfirmarClave";
+            // 
+            // ConfirmarClavetextBox
+            // 
+            this.ConfirmarClavetextBox.Location = new System.Drawing.Point(169, 186);
+            this.ConfirmarClavetextBox.Name = "ConfirmarClavetextBox";
+            this.ConfirmarClavetextBox.Size = new System.Drawing.Size(226, 22);
+            this.ConfirmarClavetextBox.TabIndex = 17;
+            // 
             // rUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoFinal_AdrielV.Properties.Resources._92786425_plantilla_de_logotipo_de_muebles_icono_de_muebles_logotipo_de_la_tienda_de_muebles_diseño_de_muebles_mu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(431, 369);
+            this.ClientSize = new System.Drawing.Size(431, 399);
+            this.Controls.Add(this.ConfirmarClavetextBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -257,5 +280,7 @@
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.TextBox ConfirmarClavetextBox;
+        private System.Windows.Forms.Label label7;
     }
 }
