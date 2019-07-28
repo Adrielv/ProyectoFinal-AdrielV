@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using Entidades;
-
-
+using ProyectoFinal_AdrielV.Reportes;
 
 namespace ProyectoFinal_AdrielV.Consultas
 {
@@ -192,6 +191,18 @@ namespace ProyectoFinal_AdrielV.Consultas
             }
         }
 
-     
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            if (ConsultadataGridView.RowCount == 0)
+            {
+                MessageBox.Show("No se puede imprimir");
+                return;
+            }
+            else
+            {
+                Producto1Report r = new Producto1Report(Lista);
+                r.ShowDialog();
+            }
+        }
     }
 }
