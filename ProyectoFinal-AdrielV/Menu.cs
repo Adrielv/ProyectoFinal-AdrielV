@@ -71,5 +71,11 @@ namespace ProyectoFinal_AdrielV
             Consultas.cCliente clw = new Consultas.cCliente();
             clw.Show();
         }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutMuebleria AB = new AboutMuebleria();
+            AB.Show();
+        }
     }
 }
