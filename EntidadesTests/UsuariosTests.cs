@@ -15,18 +15,20 @@ namespace Entidades.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            Usuarios u = new Usuarios();
-            u.UsuarioId = 1;
-            u.Usuario = "Adriel0988";
-            u.Clave = "adr123";
-            u.Nombres = "Adriel villar";
-            u.Email = "Adrielprog@gmail.com";
-            u.FechaCreacion = DateTime.Now;
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
 
-            RepositorioBase<Usuarios> r = new RepositorioBase<Usuarios>();
-            bool paso = false;
-            paso = r.Guardar(u);
-            Assert.AreEqual(true, paso);
+
+            Usuarios us = new Usuarios()
+            {
+                UsuarioId = 0,
+                Nombres = "Adriel",
+                Email = "Adriel1@gmail.com",
+                Usuario = "Adriel123",
+                Clave = "12345",         
+                FechaCreacion = DateTime.Now
+            };
+            Assert.IsTrue(db.Guardar(us));
+   
         }
         [TestMethod()]
         public void ModificarTest()

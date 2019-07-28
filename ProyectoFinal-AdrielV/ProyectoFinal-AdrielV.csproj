@@ -59,12 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutMuebleria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutMuebleria.Designer.cs">
-      <DependentUpon>AboutMuebleria.cs</DependentUpon>
-    </Compile>
     <Compile Include="AboutVillarSolutions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +139,12 @@
       <DependentUpon>ClienteReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\PedidosReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PedidosReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\ProductoReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,9 +163,6 @@
       <DependentUpon>UsuarioReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="AboutMuebleria.resx">
-      <DependentUpon>AboutMuebleria.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AboutVillarSolutions.resx">
       <DependentUpon>AboutVillarSolutions.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +212,10 @@
     <EmbeddedResource Include="Reportes\ClienteReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ClienteReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\PedidosReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PedidosReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ProductoReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
