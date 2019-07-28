@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label5.Text" xml:space="preserve">
+    <value> Villar solutions-Sistema de ventas de una muebleria
+Creado por-Adriel Villar V. 2015-0745
+Estudiante de la Universidad Nordestana
+
+Este sistema fue diseñado con el propósito de mejorar
+el registro de informaciones importantes y facilitar
+el acceso a ella.
+</value>
+  </data>
 </root>

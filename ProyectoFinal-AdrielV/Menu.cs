@@ -74,7 +74,7 @@ namespace ProyectoFinal_AdrielV
 
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutMuebleria AB = new AboutMuebleria();
+            AboutVillarSolutions AB = new AboutVillarSolutions();
             AB.Show();
         }
     }
