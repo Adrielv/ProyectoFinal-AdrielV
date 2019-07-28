@@ -87,6 +87,12 @@
     <Compile Include="Consultas\cProducto.Designer.cs">
       <DependentUpon>cProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\cProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\cProveedor.Designer.cs">
+      <DependentUpon>cProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClienteReport.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Factura1Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Factura1Report.Designer.cs">
+      <DependentUpon>Factura1Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\FacturaReport.cs">
       <AutoGen>True</AutoGen>
@@ -255,6 +267,9 @@
     <EmbeddedResource Include="Reportes\ClienteReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ClienteReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Factura1Report.resx">
+      <DependentUpon>Factura1Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FacturaReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

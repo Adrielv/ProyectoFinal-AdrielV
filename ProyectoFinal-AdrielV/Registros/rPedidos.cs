@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using Entidades;
-
+using ProyectoFinal_AdrielV.Reportes;
 
 namespace ProyectoFinal_AdrielV.Registros
 {
     public partial class rPedidos : Form
     {
         public List<PedidoDetalle> Detalle { get; set; }
+        private List<PedidoDetalle> Ventas { get; set; }
         public rPedidos()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace ProyectoFinal_AdrielV.Registros
             ClientecomboBox.Text = null;
        
             this.Detalle = new List<PedidoDetalle>();
+            this.Ventas = new List<PedidoDetalle>();
         }
         private void Limpiar()
         {
@@ -68,12 +70,12 @@ namespace ProyectoFinal_AdrielV.Registros
         }
         private void LlenaCampo(Pedidos pedidos)
         {
-
+            
             IDnumericUpDown.Value = pedidos.PedidosId;
             PedidocomboBox.Text = pedidos.FormaPedido;
            
             ClientecomboBox.Text = pedidos.Cliente;
-            FechadateTimePicker.Value = pedidos.FechaPedido;    //falta precio y cantidad
+            FechadateTimePicker.Value = pedidos.FechaPedido;   
         
             ITBISnumericUpDown.Value = pedidos.ITBIS;
             subTotalnumericUpDown.Value = pedidos.SubTotal;
@@ -94,7 +96,7 @@ namespace ProyectoFinal_AdrielV.Registros
             InformacionesdataGridView.DataSource = null;
             InformacionesdataGridView.DataSource = Detalle;
         }
-        //fALTA VALIDACIONES
+      
         private bool Validar()
         {
 
@@ -189,8 +191,9 @@ namespace ProyectoFinal_AdrielV.Registros
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          
-            this.Refresh();
+              Reportes.Factura1Report r  = new Reportes.Factura1Report(Ventas);
+               r.ShowDialog();
+            
             Limpiar();
             
         }
