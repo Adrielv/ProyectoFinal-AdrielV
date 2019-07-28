@@ -77,5 +77,11 @@ namespace ProyectoFinal_AdrielV
             AboutVillarSolutions AB = new AboutVillarSolutions();
             AB.Show();
         }
+
+        private void ProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.cProveedor pv = new Consultas.cProveedor();
+            pv.Show();
+        }
     }
 }
